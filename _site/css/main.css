@@ -62,6 +62,9 @@ table {
   font-family: 'Lato-Thin';
   src: url(../fonts/Lato-Light.ttf) format("truetype"); }
 
+body.--locked {
+  overflow: hidden; }
+
 .text.--title {
   color: #03061b;
   font-family: 'Lato-Thin';
