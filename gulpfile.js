@@ -1,15 +1,44 @@
 const gulp = require('gulp');
+const eventStream = require('event-stream');
+const babel = require('gulp-babel');
 const browserSync = require('browser-sync');
+const clean = require('gulp-clean');
+const concat = require('gulp-concat');
 const cp = require('child_process');
 const image = require('gulp-image');
 const notify = require('gulp-notify');
 const prefix = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
 
 let jekyll   = 'jekyll';
 let messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
+
+let scripts = [
+    ''
+];
+
+gulp.task('clean:js', () => {
+    return gulp.src('./public/scripts/app.min.js').pipe(clean());
+});
+
+gulp.task('js', () => {
+    return eventStream.merge([
+        gulp.src(scripts),
+        gulp.src('_javascript/**/*.js')
+            .pipe(babel({
+                presets: ['env']
+            }))
+    ])
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.min.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('_site/javascript/'))
+    .pipe(browserSync.reload({stream:true}))
+    .pipe(gulp.dest('javascript/'));
+});
 
 gulp.task('images', () => {
     return gulp.src('images/**')
@@ -50,7 +79,6 @@ gulp.task('sass', () => {
     return gulp.src('_scss/main.scss')
         .pipe(sass({
             includePaths: ['scss'],
-            onError: browserSync.notify
         }))
         .on('error',
             notify.onError({
@@ -67,6 +95,7 @@ gulp.task('sass', () => {
 
 gulp.task('watch', () => {
     gulp.watch(['_scss/*.scss', '_scss/**/*.scss'], ['sass']);
+    gulp.watch(['_javascript/*.js'], ['js']);
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
