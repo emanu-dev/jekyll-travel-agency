@@ -1,0 +1,27 @@
+---
+menu-items:
+- name: home
+- name: grupo estanplaza
+- name: espaços
+- name: gastronomia
+- name: depoimentos
+- name: contato
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ page.title }}</title>
+	<link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
+</head>
+<body>
+{% include header.html %}
+{% include main-gallery.html %}
+{% include section-container.html title="traga seu evento ao <strong> grupo estanplaza</strong>" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi.." %}
+{% include places-menu.html %}
+{% include section-container-reverse.html title="gastronomia" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi.." %}
+{% include testimonials.html %}
+{% include contact.html title="agende seu evento" %}
+</body>
+</html>

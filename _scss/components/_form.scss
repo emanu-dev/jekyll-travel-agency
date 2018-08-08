@@ -1,0 +1,40 @@
+.form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-row-gap: 1rem;
+	grid-column-gap: 2rem;
+	height: 100%;
+	padding: 10% 0;
+	width: 100%;
+
+	.form__input {
+		border: 0;
+		border-bottom: 1px solid $main-brand;
+
+		&.--select {
+
+		}
+
+		&.--textarea {
+			height: auto;
+			overflow-y: visible;
+			resize: none;
+		}
+
+		&.--span-line {
+			grid-column: 1 / span 2;
+		}
+	}
+
+	.form__submit {
+		background-color: tranparent;
+		border: 1px solid $main-brand;
+		color: $main-brand;
+		font-size: .8rem;
+
+		&:hover {
+			background-color: $element-focus;
+			cursor: pointer;
+		}
+	}
+}

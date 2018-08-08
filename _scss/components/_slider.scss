@@ -1,0 +1,41 @@
+.slider {
+    overflow: hidden;
+    min-height: 50vh;
+    width: 100%;
+
+
+    .slider__list {
+        animation-duration: 30s;
+        animation-name: simulateslide;
+        animation-iteration-count: infinite;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: -25%;
+        width: 400vw;
+
+        .slider__list-item {
+            
+            .slider__list-img {
+                background-size: cover;
+                background-position: center;
+	            height: 100vh;
+	            width: 100vw;
+            }
+        }
+    }
+}
+
+@keyframes simulateslide {
+    0% {left: 0vw;}
+    5% {left: 0vw;}
+    20% {left: -100vw;}
+    25% {left: -100vw;}
+    40% {left: -200vw;}
+    45% {left: -200vw;}
+    60% {left: -300vw;}
+    65% {left: -300vw;}
+    80% {left: -400vw;}
+    85% {left: -400vw;}
+    100% {left: 0vw;}
+}

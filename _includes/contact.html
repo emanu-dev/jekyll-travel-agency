@@ -1,0 +1,20 @@
+<section class='contact'>
+	<div class='contact__image'></div>
+	<div class='contact__form'>
+		<h2 class='text --title --center'>{{include.title}}</h2>
+		<div class='contact__form-divider'></div>
+		<form action='' class='form'>
+			<input class='form__input --span-line' type='text' name='name' placeholder='Nome'>
+			<input class='form__input --span-line' type='text' name='email' placeholder='E-mail'>
+			<input class='form__input --span-line' type='text' name='phone' placeholder='Telefone'>
+			<select class='form__input --select --span-line' name='type'>
+				<option value='' disabled selected>Escolha o tipo de evento</option>
+				<option value='corp'>Evento Corporativo</option>
+				<option value='social'>Evento Social</option>
+			</select>
+			<textarea class='form__input --textarea --span-line' data-placeholder='Mensagem' name='msg'></textarea>
+			<input class='form__input' type='text' name='promocode' placeholder='Código Promocional'>
+			<input class='form__submit' type='submit' value='Enviar'>
+		</form>
+	</div>	
+</section>

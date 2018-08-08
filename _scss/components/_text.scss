@@ -1,0 +1,30 @@
+.text {
+	&.--title {
+		color: $main-brand;
+		font-family: 'Lato-Thin';
+		font-size: 2rem;
+		line-height: 2.4rem;
+		text-transform: uppercase;
+	}
+
+	&.--body {
+		color: $main-brand;	
+		font-family: 'Lato-Thin';
+		font-size: 1rem;
+		line-height: 1.6rem;
+	}
+
+	&.--center {
+		text-align: center;
+	}
+
+	> strong {
+		font: inherit;
+		font-weight: bold;
+	}
+
+	&.--neg {
+		color: $neg-brand;	
+	}
+
+}

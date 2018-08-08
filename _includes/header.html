@@ -1,0 +1,13 @@
+<header class='header'>
+	<div class='header__contact'>
+		<p class='header__contact-text'>+55 11 3059 3277 - São Paulo Capital | 0800 726 1500 - Demais Localidades </p>
+	</div>
+	<div class="header__nav">
+		<img src="{{ "/images/logo-neg.svg" | relative_url }}" alt="" class="header__logo">
+		<ul class='header__menu'>
+			{% for item in layout.menu-items %}
+			    <li class='header__menu-item'><a href="">{{ item.name }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</header>

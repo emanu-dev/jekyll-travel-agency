@@ -1,0 +1,38 @@
+.contact{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 100vh;
+
+	.contact__form {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 8rem;
+		position: relative;
+
+		.contact__form-divider {
+			background-color: #03061b;
+			height: .1rem;
+			margin: 1rem 0;
+			width: 50%;
+		}
+
+		&:after {
+			position: absolute;
+			border: 2px solid #03061b;
+			content: "";
+			height: 80%;
+			width: 80%;
+			top: 10%;
+			left: 10%;
+			pointer-events: none;
+		}
+	}
+	.contact__image {
+		background-image: url('https://picsum.photos/600/700');
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "name": "est-events",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emanuel Prado",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-file-include": "^2.0.1",
+    "gulp-image": "^4.3.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

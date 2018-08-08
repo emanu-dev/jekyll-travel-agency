@@ -1,0 +1,75 @@
+.places-menu {
+	background: $main-brand;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 15rem 15rem 10rem;
+
+	.places-menu__item {
+		align-items: center;
+		background-color: rgba($main-brand, .9);
+		display: flex;
+		flex-direction: center;
+		justify-content: center;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		z-index: 5;
+
+		&:hover {
+			cursor: pointer;
+			
+			&:before {
+				opacity: .5;
+			}
+		}
+		
+		&:before {
+			background-image: url('https://picsum.photos/500/600/?random');
+			background-position: center;
+			background-size: cover;					
+			content: "";
+			opacity: .25;
+			height: 100%;
+			position: absolute;
+			transition: opacity 300ms ease;
+			width: 100%;
+			z-index: -1;
+		}
+
+		&:after {
+			border: 2px solid #fff;
+			content: "";
+			height: 80%;
+			left: 10%;
+			pointer-events: none;
+			position: absolute;
+			top: 10%;
+			width: 80%;
+			z-index: 10;
+		}
+
+		&.--left {
+			&:after {
+				left: -1%;
+				width: 90%;	
+			}
+		}
+
+		&.--right {
+			&:after {
+				left: 11%;
+				width: 90%;	
+			}
+		}	
+
+		&.--line {
+			grid-column: 1 / span 2;
+			
+			&:after {
+				width: 102%;
+				left: -1%;
+			}
+		}
+	}
+}

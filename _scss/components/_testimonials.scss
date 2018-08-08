@@ -1,0 +1,78 @@
+.testimonials {
+	align-items: center;
+	background-image: url('https://picsum.photos/856/720');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+
+	&:after {
+		background-color: rgba(#fff, .6);
+		content: "";
+		height: 20rem;
+		top: calc(50% - 10rem);
+		position: absolute;
+		width: 100%;
+	}
+
+	.testimonials__list {
+        animation-duration: 30s;
+        animation-name: simulateslide;
+        animation-iteration-count: infinite;		
+		display: flex;
+		position: absolute;
+		z-index: 9;
+
+		.testimonials__item {
+			align-items: center;
+			color: $main-brand;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 100vw;
+
+			.testimonials__item-text {
+				display: flex;
+				flex-direction: column;
+				font-size: 4rem;
+				position: relative;
+				text-align: center;
+				padding: 0 25%;
+				width: 100%;
+				
+				&:after {
+					align-self: flex-end;
+					position: absolute;
+					bottom: -1rem;
+					content: "...";
+				}
+			}
+
+			.testimonials__item-name {
+				font-size: 1.2rem;
+				line-height: 2.5rem;
+				text-align: right;
+				padding: 0 25%;
+				width: 100%;
+			}			
+		}
+	}
+}
+
+@keyframes simulateslide {
+    0% {left: 0vw;}
+    5% {left: 0vw;}
+    20% {left: -100vw;}
+    25% {left: -100vw;}
+    40% {left: -200vw;}
+    45% {left: -200vw;}
+    60% {left: -300vw;}
+    65% {left: -300vw;}
+    80% {left: -400vw;}
+    85% {left: -400vw;}
+    100% {left: 0vw;}
+}

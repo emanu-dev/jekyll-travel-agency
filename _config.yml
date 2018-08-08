@@ -1,0 +1,12 @@
+name: Estanplaza Eventos
+
+include: 
+  - fonts
+
+exclude:
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock  
+  - gulpfile.js
+  - node_modules  
