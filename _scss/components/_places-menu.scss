@@ -4,6 +4,11 @@
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 15rem 15rem 10rem;
 
+	@media (max-width: 600px) {
+		display: flex;
+		flex-direction: column;
+	}
+
 	.places-menu__item {
 		align-items: center;
 		background-color: rgba($main-brand, .9);
@@ -15,6 +20,15 @@
 		position: relative;
 		width: 100%;
 		z-index: 5;
+
+		@media (max-width: 600px) {
+			height: 20vh;
+
+			.text.--title {
+				font-size: 1.6rem;
+				line-height: 2rem;
+			}
+		}
 
 		&:hover {
 			cursor: pointer;
@@ -47,19 +61,32 @@
 			top: 10%;
 			width: 80%;
 			z-index: 10;
+
+			@media (max-width: 600px) {
+				border-left: 0;
+				border-right: 0;
+				height: 98%;
+				left: 20%;
+				top: 0;
+				width: 60%;
+			}
 		}
 
 		&.--left {
 			&:after {
-				left: -1%;
-				width: 90%;	
+				@media (min-width: 600px) {
+					left: -1%;
+					width: 90%;						
+				}
 			}
 		}
 
 		&.--right {
 			&:after {
-				left: 11%;
-				width: 90%;	
+				@media (min-width: 600px) {
+					left: 11%;
+					width: 90%;	
+				}
 			}
 		}	
 
@@ -67,8 +94,10 @@
 			grid-column: 1 / span 2;
 			
 			&:after {
-				width: 102%;
-				left: -1%;
+				@media (min-width: 600px) {
+					width: 102%;
+					left: -1%;
+				}				
 			}
 		}
 	}

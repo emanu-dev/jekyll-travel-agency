@@ -1,0 +1,12 @@
+.footer {
+	align-items: center;
+	background-color: $main-brand;
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+
+	.footer__logo {
+		height: 6rem;
+		width: auto;
+	}
+}

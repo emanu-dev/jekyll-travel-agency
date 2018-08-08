@@ -1,7 +1,14 @@
 .contact{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	height: 100vh;
+	height: auto;
+	min-height: 40rem;
+
+	@media (max-width: 600px) {
+		height: auto;
+		grid-template-columns: 100vw;
+		grid-template-rows: 1fr;
+	}
 
 	.contact__form {
 		align-items: center;
@@ -10,6 +17,14 @@
 		justify-content: center;
 		padding: 8rem;
 		position: relative;
+
+		@media (max-width: 600px) {
+			padding: 2rem;
+
+			&:after {
+				display: none;
+			}
+		}
 
 		.contact__form-divider {
 			background-color: #03061b;
@@ -34,5 +49,9 @@
 		background-size: cover;
 		height: 100%;
 		width: 100%;
+
+		@media (max-width: 600px) {
+			height: 50vh;
+		}		
 	}
 }

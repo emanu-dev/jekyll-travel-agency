@@ -38,11 +38,17 @@
 			.testimonials__item-text {
 				display: flex;
 				flex-direction: column;
+				font-family: 'Lato-Regular';
 				font-size: 4rem;
 				position: relative;
 				text-align: center;
 				padding: 0 25%;
 				width: 100%;
+
+				@media (max-width: 600px) {
+					font-size: 2rem;
+					padding: 0 10%;
+				}
 				
 				&:after {
 					align-self: flex-end;
@@ -53,11 +59,17 @@
 			}
 
 			.testimonials__item-name {
+				font-family: 'Lato-Thin';
 				font-size: 1.2rem;
+				font-style: italic;
 				line-height: 2.5rem;
 				text-align: right;
 				padding: 0 25%;
 				width: 100%;
+
+				@media (max-width: 600px) {
+					padding: 0 10%;
+				}				
 			}			
 		}
 	}

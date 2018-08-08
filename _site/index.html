@@ -1,18 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-Br">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <!-- og metas -->
+    <meta property="og:title" content="Eventos Estanplaza">
+    <meta property="og:description" content="Eventos Estanplaza">
+    <meta property="og:type" content="website">
+    <meta property="og:image:alt" content="">
+    <meta property="og:image" content="">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Entrecliques">
+    <meta http-equiv="copyright" content="© 2018 Entrecliques">
+    <meta name="keywords" content="hotel, eventos">
+    <meta http-equiv="cache-control" content="Public">
+    <meta http-equiv="pragma" content="Public">
+    <meta name="description" content="Agora é a sua vez! Inscreva-se na FKB">
+    <meta name="author" content="Entrecliques Digital Media Intelligence">
 	<title>Estanplaza Eventos Sociais</title>
 	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 <header class='header'>
 	<div class='header__contact'>
-		<p class='header__contact-text'>+55 11 3059 3277 - São Paulo Capital | 0800 726 1500 - Demais Localidades </p>
+		<p class='header__contact-text'>+55 11 3059 3277 - São Paulo Capital | 0800 726 1500 - Demais Localidades</p>
 	</div>
 	<div class="header__nav">
 		<img src="/images/logo-neg.svg" alt="" class="header__logo">
-		<ul class='header__menu'>
+		<div class="header__mobile --text">EVENTOS</div>
+		<button class="header__mobile --btn" id='mobile-menu-toggle'></button>
+		</v-container>
+		<ul class='header__menu' id='mobile-menu'>
 			
 			    <li class='header__menu-item'><a href="">home</a></li>
 			
@@ -84,23 +103,23 @@
 <section class='testimonials'>
 		<ul class='testimonials__list'>
 			<li class="testimonials__item">
-				<p class='testimonials__item-text'>"Text"</p>
+				<p class='testimonials__item-text'>"Lorem ipsum dolor sit amet!"</p>
 				<p class='testimonials__item-name'>Name</p>
 			</li>
 			<li class="testimonials__item">
-				<p class='testimonials__item-text'>"Text"</p>
+				<p class='testimonials__item-text'>"Lorem ipsum dolor sit amet!"</p>
 				<p class='testimonials__item-name'>Name</p>
 			</li>
 			<li class="testimonials__item">
-				<p class='testimonials__item-text'>"Text"</p>
+				<p class='testimonials__item-text'>"Lorem ipsum dolor sit amet."</p>
 				<p class='testimonials__item-name'>Name</p>
 			</li>
 			<li class="testimonials__item">
-				<p class='testimonials__item-text'>"Text"</p>
+				<p class='testimonials__item-text'>"Lorem ipsum dolor sit amet."</p>
 				<p class='testimonials__item-name'>Name</p>
 			</li>
 			<li class="testimonials__item">
-				<p class='testimonials__item-text'>"Text"</p>
+				<p class='testimonials__item-text'>"Lorem ipsum dolor sit amet."</p>
 				<p class='testimonials__item-name'>Name</p>
 			</li>			
 		</ul>
@@ -115,7 +134,7 @@
 			<input class='form__input --span-line' type='text' name='email' placeholder='E-mail'>
 			<input class='form__input --span-line' type='text' name='phone' placeholder='Telefone'>
 			<select class='form__input --select --span-line' name='type'>
-				<option value='' disabled selected>Escolha o tipo de evento</option>
+				<option value='' disabled='true' selected>Escolha o tipo de evento</option>
 				<option value='corp'>Evento Corporativo</option>
 				<option value='social'>Evento Social</option>
 			</select>
@@ -125,5 +144,9 @@
 		</form>
 	</div>	
 </section>
+<footer class='footer'>
+	<img class='footer__logo' src='images/logo-neg.svg' alt="">
+</footer>
 </body>
+<script src="/javascript/app.min.js"></script>
 </html>
