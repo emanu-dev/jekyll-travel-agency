@@ -1,0 +1,10 @@
+.icon {
+	font-size: .5rem;
+	transition: opacity 300ms ease;
+
+	&.--no-mobile {
+		@media (max-width: 800px) {
+			display: none;
+		}
+	}
+}

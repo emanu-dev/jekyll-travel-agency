@@ -33,7 +33,7 @@ slides.forEach(()=>{
 	slideNav.lastChild.addEventListener('click', (e) => {
 		let allItems = [].slice.call(slideNav.childNodes);
 		
-		allItems.forEach((item, index)=>{
+		allItems.forEach((item, index) => {
 			if (item == e.currentTarget) {
 				item.classList.add('--active');
 				activeSlide = index;
@@ -85,3 +85,13 @@ slider.addEventListener('mouseleave', () =>{
 });
 
 /*=====  End of Slider  ======*/
+
+//TO DO: Clean Up
+/*=======================================
+=            Menu Navigation            =
+=======================================*/
+
+
+
+/*=====  End of Menu Navigation  ======*/
+
