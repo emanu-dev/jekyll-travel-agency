@@ -135,3 +135,125 @@ function scrollView(sectionId) {
 
 /*=====  End of Menu Navigation  ======*/
 
+//TO DO: Clean Up
+/*=======================================
+=            Form Validation            =
+=======================================*/
+
+const submitBtn = document.getElementById('form-submit');
+
+submitBtn.addEventListener('click', (e) => {
+	e.preventDefault();
+	const contactForm = document.getElementById('contact-form');
+
+	let formData = getData(contactForm);
+
+	let verifyResponse = verifyData(formData);
+
+	document.getElementById('form-hint').textContent = verifyResponse.message;
+	
+	if (verifyResponse.valid == false) {
+		document.getElementById('form-hint').classList.add('--warning');
+	}
+
+});
+
+function getData(form) {
+	if (!form || form.nodeName !== "FORM") {
+		return;
+	}
+	let group = {};
+	let i, j, q = [];
+	for (i = form.elements.length - 1; i >= 0; i = i - 1) {
+		if (form.elements[i].name === "") {
+			continue;
+		}
+		switch (form.elements[i].nodeName) {
+		case 'INPUT':
+			switch (form.elements[i].type) {
+			case 'text':
+			case 'email':
+			case 'hidden':
+			case 'password':
+			case 'button':
+			case 'reset':
+			case 'submit':
+				q.push(form.elements[i].name + "=" + encodeURIComponent(form.elements[i].value));
+				group[form.elements[i].name] = encodeURIComponent(form.elements[i].value);
+				break;
+			case 'checkbox':
+			case 'radio':
+			case 'file':
+				break;
+			}
+			break;			 
+		case 'TEXTAREA':
+			group[form.elements[i].name] = encodeURIComponent(form.elements[i].value);
+			break;
+		case 'SELECT':
+			switch (form.elements[i].type) {
+			case 'select-one':
+				group[form.elements[i].name] = encodeURIComponent(form.elements[i].value);
+				break;
+			case 'select-multiple':
+				for (j = form.elements[i].options.length - 1; j >= 0; j = j - 1) {
+					if (form.elements[i].options[j].selected) {
+						group[form.elements[i].name] = encodeURIComponent(form.elements[i].options[j].value);
+					}
+				}
+				break;
+			}
+			break;
+		case 'BUTTON':
+			break;
+		}
+	}
+
+	return group;
+}
+
+function verifyData(formData) {
+	console.log(formData);
+
+    let valid = false;
+    let message = ['Insira '];
+    let response = {};
+
+    if (!formData.name.replace(/\s/g, '').length) {
+        // hlForm('form-name');
+        message.push('seu nome');
+        valid = false;
+    }
+
+    if (!formData.email.replace(/\s/g, '').length) {
+        // hlForm('form-email');
+        message.push('seu email');
+        valid = false;
+    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email)) {
+        hlForm('form-email');
+        message.push('um email valido');
+        valid = false;
+    }
+
+    if (!formData.phone.replace(/\s/g, '').length) {
+        // hlForm('form-phone');
+        message.push('seu telefone');
+        valid = false;
+    }
+
+    if (!formData.msg.replace(/\s/g, '').length) {
+   
+    }
+
+    console.log(message.join(','));
+
+    response['valid'] = valid;
+    response['message'] = message;
+
+    return response;
+
+};
+
+/*=====  End of Form Validation  ======*/
+
+
