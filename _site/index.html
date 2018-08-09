@@ -33,41 +33,61 @@
 		</v-container>
 		<ul class='header__menu' id='mobile-menu'>
 			
-			    <li class='header__menu-item'><a href="">home </a>
+			    <li class='header__menu-item' data-section='main-slider'>
+			    	<a href="#">home
+			    		
+			    	</a>
 			    	
 			    </li>
 			
-			    <li class='header__menu-item'><a href="">grupo estanplaza </a>
+			    <li class='header__menu-item' data-section='main-section'>
+			    	<a href="#">grupo estanplaza
+			    		
+			    	</a>
 			    	
 			    </li>
 			
-			    <li class='header__menu-item'><a href="">espaços  <span class='icon --no-mobile'>▼</span> </a>
+			    <li class='header__menu-item' data-section='places-section'>
+			    	<a href="#">espaços
+			    		
+			    			<span class='icon --no-mobile'>▼</span>
+						
+			    	</a>
 			    	
-			    	<ul class='header__submenu'>
-			    	
-			    		<li class='header__submenu-item'><a href="#">funchal</a></li>
-			    	
-			    		<li class='header__submenu-item'><a href="#">internacional</a></li>
-			    	
-			    		<li class='header__submenu-item'><a href="#">berrini</a></li>
-			    	
-			    		<li class='header__submenu-item'><a href="#">estanconfor veranda berrini</a></li>
-			    	
-			    		<li class='header__submenu-item'><a href="#">bar mirante</a></li>
-			    	
-			    	</ul>
-			    	
-			    </li>
-			
-			    <li class='header__menu-item'><a href="">gastronomia </a>
-			    	
-			    </li>
-			
-			    <li class='header__menu-item'><a href="">depoimentos </a>
+				    	<ul class='header__submenu'>
+				    	
+				    		<li class='header__submenu-item'><a href="#">funchal</a></li>
+				    	
+				    		<li class='header__submenu-item'><a href="#">internacional</a></li>
+				    	
+				    		<li class='header__submenu-item'><a href="#">berrini</a></li>
+				    	
+				    		<li class='header__submenu-item'><a href="#">estanconfor veranda berrini</a></li>
+				    	
+				    		<li class='header__submenu-item'><a href="#">bar mirante</a></li>
+				    	
+				    	</ul>
 			    	
 			    </li>
 			
-			    <li class='header__menu-item'><a href="">contato </a>
+			    <li class='header__menu-item' data-section='food-section'>
+			    	<a href="#">gastronomia
+			    		
+			    	</a>
+			    	
+			    </li>
+			
+			    <li class='header__menu-item' data-section='testimonials-section'>
+			    	<a href="#">depoimentos
+			    		
+			    	</a>
+			    	
+			    </li>
+			
+			    <li class='header__menu-item' data-section='contact-section'>
+			    	<a href="#">contato
+			    		
+			    	</a>
 			    	
 			    </li>
 			
@@ -95,7 +115,7 @@
 	</ul>
 	<div class='slider__nav' id='slider-nav'></div>
 </div>
-<section class='section'>
+<section class='section' id='main-section'>
 	<div class="section__content">
 		<h2 class='text --title --center'>traga seu evento ao <strong> grupo estanplaza</strong></h2>
 		<div class="section__content-divider"></div>
@@ -103,7 +123,7 @@
 	</div>
 	<div class="section__image"></div>
 </section>
-<section class='places-menu'>
+<section class='places-menu' id='places-section'>
 	<div class="places-menu__item --left">
 		<h3 class="text --title --center --neg">Estanplaza <br> <strong>Funchal</strong></h3>
 	</div>
@@ -120,7 +140,7 @@
 		<h3 class="text --title --center --neg">Bar <strong>Mirante</strong></h3>
 	</div>
 </section>
-<section class='section'>
+<section class='section' id='food-section'>
 	<div class="section__image"></div>
 	<div class="section__content">
 		<h2 class='text --title --center'>gastronomia</h2>
@@ -128,7 +148,7 @@
 		<p class='text --body --center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi..</p>
 	</div>	
 </section>
-<section class='testimonials'>
+<section class='testimonials' id='testimonials-section'>
 		<ul class='testimonials__list'>
 			<li class="testimonials__item">
 				<p class='testimonials__item-text'>"Lorem ipsum dolor sit amet!"</p>
@@ -152,7 +172,7 @@
 			</li>			
 		</ul>
 </section>
-<section class='contact'>
+<section class='contact' id='contact-section'>
 	<div class='contact__image'></div>
 	<div class='contact__form'>
 		<h2 class='text --title --center'>agende seu evento</h2>

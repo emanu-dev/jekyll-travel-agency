@@ -56,7 +56,7 @@ table {
 
 @font-face {
   font-family: 'Lato-Medium';
-  src: url(../fonts/Lato-Medium.ttf) format("truetype"); }
+  src: url(../fonts/Lato-Regular.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Lato-Thin';
@@ -383,7 +383,7 @@ body.--locked {
         -webkit-flex-direction: column;
             -ms-flex-direction: column;
                 flex-direction: column;
-        font-family: 'Lato-Regular';
+        font-family: 'Lato-Medium';
         font-size: 4rem;
         position: relative;
         text-align: center;
