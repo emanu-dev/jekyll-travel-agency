@@ -445,7 +445,7 @@ body.--locked {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    font-family: 'Lato-Bold';
+    font-family: 'Lato-Medium';
     font-size: 5rem;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
