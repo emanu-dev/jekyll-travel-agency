@@ -17,7 +17,9 @@ let messages = {
 };
 
 let scripts = [
-    ''
+    './node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js',
+    './node_modules/vanilla-masker/build/vanilla-masker.min.js',
+    './node_modules/vanilla-lazyload/dist/lazyload.iife.js'
 ];
 
 gulp.task('clean:js', () => {
@@ -26,11 +28,11 @@ gulp.task('clean:js', () => {
 
 gulp.task('js', () => {
     return eventStream.merge([
-        gulp.src(scripts),
-        gulp.src('_javascript/**/*.js')
-            .pipe(babel({
-                presets: ['env']
-            }))
+    gulp.src('_javascript/**/*.js')
+        .pipe(babel({
+            presets: ['env']
+        })),
+        gulp.src(scripts)
     ])
     .pipe(sourcemaps.init())
     .pipe(concat('app.min.js'))
@@ -39,6 +41,23 @@ gulp.task('js', () => {
     .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest('javascript/'));
 });
+
+gulp.task('clean:libjs', () => {
+    return gulp.src('./public/scripts/lib.min.js').pipe(clean());
+});
+
+gulp.task('libjs', () => {
+    return eventStream.merge([
+        gulp.src(scripts)
+    ])
+    .pipe(sourcemaps.init())
+    .pipe(concat('lib.min.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('_site/javascript/'))
+    .pipe(browserSync.reload({stream:true}))
+    .pipe(gulp.dest('javascript/'));
+});
+
 
 gulp.task('images', () => {
     return gulp.src('images/**')

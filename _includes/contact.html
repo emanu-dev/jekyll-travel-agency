@@ -4,16 +4,17 @@
 		<h2 class='text --title --center'>{{include.title}}</h2>
 		<div class='contact__form-divider'></div>
 		<form action='#' class='form' id='contact-form'>
-			<input class='form__input --span-line' type='text' name='name' placeholder='Nome' required>
-			<input class='form__input --span-line' type='text' name='email' placeholder='E-mail' required>
-			<input class='form__input --span-line' type='text' name='phone' placeholder='Telefone' required>
-			<select class='form__input --select --span-line' name='type' required>
+			<input class='form__input --span-line' type='text' name='name' id='input-name' placeholder='Nome' required>
+			<input class='form__input --span-line' type='text' name='email' id='input-email' placeholder='E-mail' required>
+			<input class='form__input --span-line' type='text' name='phone' id='input-phone' placeholder='Telefone' required>
+			<select class='form__input --select --span-line' name='type' id='input-type' required>
 				<option value='' disabled='true' selected>Escolha o tipo de evento</option>
 				<option value='corp'>Evento Corporativo</option>
 				<option value='social'>Evento Social</option>
 			</select>
-			<textarea class='form__input --textarea --span-line' data-placeholder='Mensagem' name='msg'></textarea>
-			<input class='form__input' type='text' name='promocode' placeholder='Código Promocional'>
+			<textarea class='form__input --textarea --span-line' id='input-msg' data-placeholder='Mensagem' name='msg'></textarea>
+			<div class='form__fakelabel' id='fake-label' data-input='input-msg'>Mensagem</div>
+			<input class='form__input' type='text' name='promocode' id='input-promocode' placeholder='Código Promocional'>
 			<input class='form__submit' type='submit' id='form-submit' value='Enviar'>
 		</form>
 		<div class="contact__hint text --body --center" id='form-hint'><strong></strong></div>

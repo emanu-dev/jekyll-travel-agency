@@ -33,7 +33,7 @@
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 
-mobileMenuToggle.addEventListener('click', ()=>{
+mobileMenuToggle.addEventListener('click', () => {
 	mobileMenu.classList.toggle('--active');
 	mobileMenuToggle.classList.toggle('--active');
 	document.body.classList.toggle('--locked');
@@ -113,6 +113,11 @@ slider.addEventListener('mouseleave', () =>{
 
 /*=====  End of Slider  ======*/
 
+
+
+
+
+
 //TO DO: Clean Up
 /*=======================================
 =            Menu Navigation            =
@@ -140,14 +145,17 @@ function scrollView(sectionId) {
 =            Form Validation            =
 =======================================*/
 
+VMasker(document.getElementById('input-phone')).maskPattern('(99) 999999999');
+
 const submitBtn = document.getElementById('form-submit');
 
 submitBtn.addEventListener('click', (e) => {
 	e.preventDefault();
 	const contactForm = document.getElementById('contact-form');
 
-	let formData = getData(contactForm);
+	cleanHighlightInput('contact-form');
 
+	let formData = getData(contactForm);
 	let verifyResponse = verifyData(formData);
 
 	document.getElementById('form-hint').textContent = verifyResponse.message;
@@ -178,8 +186,8 @@ function getData(form) {
 			case 'button':
 			case 'reset':
 			case 'submit':
-				q.push(form.elements[i].name + "=" + encodeURIComponent(form.elements[i].value));
-				group[form.elements[i].name] = encodeURIComponent(form.elements[i].value);
+				q.push(form.elements[i].name + "=" + form.elements[i].value);
+				group[form.elements[i].name] = form.elements[i].value;
 				break;
 			case 'checkbox':
 			case 'radio':
@@ -188,17 +196,17 @@ function getData(form) {
 			}
 			break;			 
 		case 'TEXTAREA':
-			group[form.elements[i].name] = encodeURIComponent(form.elements[i].value);
+			group[form.elements[i].name] = form.elements[i].value;
 			break;
 		case 'SELECT':
 			switch (form.elements[i].type) {
 			case 'select-one':
-				group[form.elements[i].name] = encodeURIComponent(form.elements[i].value);
+				group[form.elements[i].name] = form.elements[i].value;
 				break;
 			case 'select-multiple':
 				for (j = form.elements[i].options.length - 1; j >= 0; j = j - 1) {
 					if (form.elements[i].options[j].selected) {
-						group[form.elements[i].name] = encodeURIComponent(form.elements[i].options[j].value);
+						group[form.elements[i].name] = form.elements[i].options[j].value;
 					}
 				}
 				break;
@@ -213,47 +221,80 @@ function getData(form) {
 }
 
 function verifyData(formData) {
-	console.log(formData);
-
     let valid = false;
     let message = ['Insira '];
     let response = {};
 
-    if (!formData.name.replace(/\s/g, '').length) {
-        // hlForm('form-name');
+    if (!formData['name'].replace(/\s/g, '').length) {
+        highlightInput('input-name');
         message.push('seu nome');
+        message.push(', ');
         valid = false;
     }
 
-    if (!formData.email.replace(/\s/g, '').length) {
-        // hlForm('form-email');
+    if (!formData['email'].replace(/\s/g, '').length) {
+        highlightInput('input-email');
         message.push('seu email');
+        message.push(', ');
         valid = false;
     } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email)) {
-        hlForm('form-email');
+        highlightInput('input-email');
         message.push('um email valido');
+        message.push(', ');
         valid = false;
     }
 
-    if (!formData.phone.replace(/\s/g, '').length) {
-        // hlForm('form-phone');
+    if (!formData['phone'].replace(/\s/g, '').length) {
+        highlightInput('input-phone');
         message.push('seu telefone');
+        message.push(', ');
         valid = false;
     }
 
-    if (!formData.msg.replace(/\s/g, '').length) {
-   
+    if (!formData['type'].replace(/\s/g, '').length) {
+        highlightInput('input-type');
+        message.push('o tipo do evento');
+        message.push(', ');
+        valid = false;
     }
 
-    console.log(message.join(','));
+	message.pop();
+    if (message.length > 3) message[message.length - 2] = ' e ';
+    message = message.join('');
 
     response['valid'] = valid;
     response['message'] = message;
 
     return response;
 
-};
+}
+
+function highlightInput(id) {
+	const input = document.getElementById(id);
+	input.classList.add('--warning');
+}
+
+function cleanHighlightInput(formid) {
+	const formInputs = [].slice.call(document.getElementById(formid).childNodes);
+
+	formInputs.forEach((element) => {
+		if (element.nodeName != '#text') element.classList.remove('--warning');
+	});
+}
+
+const fakeLabel = document.getElementById('fake-label');
+const fakeLabelInput = document.getElementById('input-msg');
+
+fakeLabelInput.addEventListener('input', (e) => {
+	if (e.currentTarget.value.replace(/\s/g, '').length) {
+		fakeLabel.style.visibility = 'hidden';
+	}
+});
+
+fakeLabelInput.addEventListener('blur', (e) => {
+	if (!e.currentTarget.value.replace(/\s/g, '').length) {
+		fakeLabel.style.visibility = 'visible';
+	}
+});
 
 /*=====  End of Form Validation  ======*/
-
-

@@ -24,5 +24,10 @@
     "gulp-notify": "^3.2.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {
+    "smoothscroll-polyfill": "^0.4.3",
+    "vanilla-lazyload": "^10.15.0",
+    "vanilla-masker": "^1.2.0"
   }
 }

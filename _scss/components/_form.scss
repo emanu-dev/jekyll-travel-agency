@@ -3,8 +3,9 @@
 	grid-template-columns: 1fr 1fr;
 	grid-row-gap: 1rem;
 	grid-column-gap: 2rem;
-	height: 100%;
+	height: auto;
 	padding: 10% 0;
+	position: relative;
 	width: 100%;
 
 	.form__input {
@@ -12,21 +13,33 @@
 		border-bottom: 1px solid $main-brand;
 		font-family: 'Lato-Thin';
 		font-size: .8rem;
+		height: auto;
+		line-height: 1rem;
 		outline: none;
 		padding: .25rem;
+		margin: 0;
+		transition: border-color 300ms ease;
+
+		&.--warning {
+			border-color: #ff2366;
+		}		
 
 		&.--select {
 			background: #fff;
 			border: 0;
 			border-bottom: 1px solid $main-brand;
 			border-radius: 0px;
-			padding: 3px 22px 3px 3px;
+			padding: .25rem;
 			background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'%3E%3C/path%3E%3C/svg%3E");
 			background-position: calc(100% - 3px) 50%;
 			background-repeat: no-repeat;
 			background-size: 16px;
 			-webkit-appearance: none;
 			-moz-appearance: none;
+
+			&.--warning {
+				border-color: #ff2366;
+			}	
 
 			&::-ms-expand {
      			display: none;
@@ -47,6 +60,18 @@
 		&:focus {
 			background-color: #ececec;
 		}
+	}
+
+	.form__fakelabel {
+		color: #656565;
+		font-family: 'Lato-Thin';
+		font-size: .8rem;
+		grid-column: 1 / 1;
+		grid-row: 5 / 5;		
+		line-height: 1rem;
+		padding: .25rem;
+		position: absolute;
+		pointer-events: none;
 	}
 
 	.form__submit {

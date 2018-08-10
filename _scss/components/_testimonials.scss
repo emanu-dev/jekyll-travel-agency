@@ -20,11 +20,9 @@
 	}
 
 	.testimonials__list {
-        animation-duration: 30s;
-        animation-name: simulateslide;
-        animation-iteration-count: infinite;		
 		display: flex;
 		position: absolute;
+		transition: left 300ms ease;
 		z-index: 9;
 
 		.testimonials__item {
@@ -70,21 +68,31 @@
 				@media (max-width: 600px) {
 					padding: 0 10%;
 				}				
-			}			
+			}
 		}
 	}
-}
 
-@keyframes simulateslide {
-    0% {left: 0vw;}
-    5% {left: 0vw;}
-    20% {left: -100vw;}
-    25% {left: -100vw;}
-    40% {left: -200vw;}
-    45% {left: -200vw;}
-    60% {left: -300vw;}
-    65% {left: -300vw;}
-    80% {left: -400vw;}
-    85% {left: -400vw;}
-    100% {left: 0vw;}
+	.testimonials__nav {
+		align-items: center;
+		color: $main-brand;
+		display: flex;
+		font-family: 'Lato-Bold';
+		font-size: 5rem;
+		justify-content: space-between;
+		padding: 0 2rem;
+		position: absolute;
+		width: 100%;
+		z-index: 9;
+
+		.testimonials__nav-item {
+			cursor: pointer;
+			transform: scaleX(.5);
+			transition: margin 300ms ease;
+
+			&:hover {
+				text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+				margin-bottom: 1rem;
+			}
+		}
+	}	
 }
