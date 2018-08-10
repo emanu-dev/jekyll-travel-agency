@@ -348,10 +348,12 @@ body.--locked {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    left: 0vw;
     position: absolute;
     -webkit-transition: left 300ms ease;
     -o-transition: left 300ms ease;
     transition: left 300ms ease;
+    width: auto;
     z-index: 9; }
     .testimonials .testimonials__list .testimonials__item {
       -webkit-box-align: center;
@@ -372,7 +374,29 @@ body.--locked {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center;
+      position: relative;
       width: 100vw; }
+      @media (max-width: 800px) {
+        .testimonials .testimonials__list .testimonials__item:before {
+          display: none; }
+        .testimonials .testimonials__list .testimonials__item:after {
+          display: none; } }
+      .testimonials .testimonials__list .testimonials__item:before {
+        content: "“";
+        font-family: 'Georgia';
+        font-size: 25rem;
+        left: 5rem;
+        pointer-events: none;
+        position: absolute;
+        top: -55%; }
+      .testimonials .testimonials__list .testimonials__item:after {
+        content: "”";
+        font-family: 'Georgia';
+        font-size: 25rem;
+        pointer-events: none;
+        position: absolute;
+        right: 5rem;
+        top: 35%; }
       .testimonials .testimonials__list .testimonials__item .testimonials__item-text {
         display: -webkit-box;
         display: -webkit-flex;
