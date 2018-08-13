@@ -10,7 +10,7 @@
 		<ul class='header__menu' id='mobile-menu'>
 			{% for item in layout.menu-items %}
 			    <li class='header__menu-item' data-section='{{ item.id }}'>
-			    	<a href="#">{{ item.name }}
+			    	<a href="/#">{{ item.name }}
 			    		{% if item.subitems %}
 			    			<span class='icon --no-mobile'>▼</span>
 						{% endif %}
@@ -18,7 +18,7 @@
 			    	{% if item.subitems %}
 				    	<ul class='header__submenu'>
 				    	{% for subitem in item.subitems %}
-				    		<li class='header__submenu-item'><a href="#">{{subitem.name}}</a></li>
+				    		<li class='header__submenu-item'><a href="{{ subitem.url }}">{{subitem.name}}</a></li>
 				    	{% endfor %}
 				    	</ul>
 			    	{% endif %}

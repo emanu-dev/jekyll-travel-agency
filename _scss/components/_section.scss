@@ -26,8 +26,28 @@
 			}
 		}
 
+		> p {
+			color: $main-brand;	
+			font-family: 'Lato-Thin';
+			font-size: 1rem;
+			line-height: 1.6rem;
+			text-align: center;
+
+			> strong {
+				font: inherit;
+				font-family: 'Lato-Bold';
+			}
+
+			> a {
+				color: $main-brand;
+				font: inherit;
+				font-family: 'Lato-Medium';
+				text-decoration: none;
+			}
+		}
+
 		.section__content-divider {
-			background-color: #03061b;
+			background-color: $main-brand;
 			height: .1rem;
 			margin: 1rem 0;
 			width: 50%;
@@ -35,7 +55,7 @@
 
 		&:after {
 			position: absolute;
-			border: 2px solid #03061b;
+			border: 2px solid $main-brand;
 			content: "";
 			height: 80%;
 			width: 80%;

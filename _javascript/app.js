@@ -47,31 +47,34 @@ mobileMenuToggle.addEventListener('click', () => {
 ==============================*/
 
 const slider = document.getElementById('main-slider');
-const slides = [].slice.call(slider.querySelectorAll('.slider__list-item'));
-const slideQty = parseInt(slides.length);
-const slideNav = document.getElementById('slider-nav');
 
-let activeSlide = 0;
-let interval = null;
+if (slider) {
 
-slides.forEach(()=>{
-	slideNav.insertAdjacentHTML('beforeend','<div class=\'slider__nav-item\'></div>');
-	slideNav.firstElementChild.classList.add('--active');
-	slideNav.lastChild.addEventListener('click', (e) => {
-		let allItems = [].slice.call(slideNav.childNodes);
-		
-		allItems.forEach((item, index) => {
-			if (item == e.currentTarget) {
-				item.classList.add('--active');
-				activeSlide = index;
-			} else {
-				item.classList.remove('--active');
-			}
+	const slides = [].slice.call(slider.querySelectorAll('.slider__list-item'));
+	const slideQty = parseInt(slides.length);
+	const slideNav = document.getElementById('slider-nav');
+
+	let activeSlide = 0;
+	let interval = null;
+
+	slides.forEach(()=>{
+		slideNav.insertAdjacentHTML('beforeend','<div class=\'slider__nav-item\'></div>');
+		slideNav.firstElementChild.classList.add('--active');
+		slideNav.lastChild.addEventListener('click', (e) => {
+			let allItems = [].slice.call(slideNav.childNodes);
+			
+			allItems.forEach((item, index) => {
+				if (item == e.currentTarget) {
+					item.classList.add('--active');
+					activeSlide = index;
+				} else {
+					item.classList.remove('--active');
+				}
+			});
+
+			slider.firstElementChild.style.left = ((activeSlide * 100) * -1).toString() + 'vw';
 		});
-
-		slider.firstElementChild.style.left = ((activeSlide * 100) * -1).toString() + 'vw';
 	});
-});
 
 
 function slideAnimation() {
@@ -111,6 +114,8 @@ slider.addEventListener('mouseleave', () =>{
 	}	
 });
 
+}
+
 /*=====  End of Slider  ======*/
 
 
@@ -118,53 +123,57 @@ slider.addEventListener('mouseleave', () =>{
 =      Testimonials Slider    =
 ==============================*/
 const testimonialSection = document.getElementById('testimonials-section');
-const testimonialList = document.getElementById('testimonial-list');
-const testimonials = [].slice.call(testimonialList.querySelectorAll('.testimonials__item'));
-const testimonialsNav = document.getElementById('testimonials-nav');
-const testimonialsQty = parseInt(testimonials.length);
+if (testimonialSection) {
 
-let activeTestimonial = 0;
-let testimonialInterval = null;
+	const testimonialList = document.getElementById('testimonial-list');
+	const testimonials = [].slice.call(testimonialList.querySelectorAll('.testimonials__item'));
+	const testimonialsNav = document.getElementById('testimonials-nav');
+	const testimonialsQty = parseInt(testimonials.length);
 
-function testimonialAnimation() {
-	testimonialList.style.left = ((activeTestimonial * 100) * -1).toString() + 'vw';	
+	let activeTestimonial = 0;
+	let testimonialInterval = null;
+
+	function testimonialAnimation() {
+		testimonialList.style.left = ((activeTestimonial * 100) * -1).toString() + 'vw';	
+	}
+
+	testimonialInterval = setInterval(() => {
+		activeTestimonial = (activeTestimonial < testimonialsQty - 1) ? activeTestimonial + 1 : 0;
+		testimonialAnimation();
+	}, 3000);
+
+
+	testimonialSection.addEventListener('mouseover', (e) =>{
+		e.stopImmediatePropagation();
+		e.preventDefault();
+		if (testimonialInterval != null) {
+			clearInterval(testimonialInterval);
+			testimonialInterval = null;
+		}	
+	});
+
+	testimonialSection.addEventListener('mouseleave', (e) =>{
+		e.stopImmediatePropagation();
+		e.preventDefault();
+		if (testimonialInterval == null) {
+			testimonialInterval = setInterval(() => {
+				activeTestimonial = (activeTestimonial < testimonialsQty - 1) ? activeTestimonial + 1 : 0;
+				testimonialAnimation();
+			}, 3000);
+		}	
+	});
+
+	testimonialsNav.querySelector('.--right').addEventListener('click', () => {
+		activeTestimonial = (activeTestimonial < testimonialsQty - 1) ? activeTestimonial + 1 : 0;
+		testimonialAnimation();	
+	});
+
+	testimonialsNav.querySelector('.--left').addEventListener('click', () => {
+		activeTestimonial = (activeTestimonial > 0) ? activeTestimonial - 1 : testimonialsQty - 1;
+		testimonialAnimation();	
+	});
+
 }
-
-testimonialInterval = setInterval(() => {
-	activeTestimonial = (activeTestimonial < testimonialsQty - 1) ? activeTestimonial + 1 : 0;
-	testimonialAnimation();
-}, 3000);
-
-
-testimonialSection.addEventListener('mouseover', (e) =>{
-	e.stopImmediatePropagation();
-	e.preventDefault();
-	if (testimonialInterval != null) {
-		clearInterval(testimonialInterval);
-		testimonialInterval = null;
-	}	
-});
-
-testimonialSection.addEventListener('mouseleave', (e) =>{
-	e.stopImmediatePropagation();
-	e.preventDefault();
-	if (testimonialInterval == null) {
-		testimonialInterval = setInterval(() => {
-			activeTestimonial = (activeTestimonial < testimonialsQty - 1) ? activeTestimonial + 1 : 0;
-			testimonialAnimation();
-		}, 3000);
-	}	
-});
-
-testimonialsNav.querySelector('.--right').addEventListener('click', () => {
-	activeTestimonial = (activeTestimonial < testimonialsQty - 1) ? activeTestimonial + 1 : 0;
-	testimonialAnimation();	
-});
-
-testimonialsNav.querySelector('.--left').addEventListener('click', () => {
-	activeTestimonial = (activeTestimonial > 0) ? activeTestimonial - 1 : testimonialsQty - 1;
-	testimonialAnimation();	
-});
 
 /*=====  End of Testimonials Slider  ======*/
 
@@ -177,17 +186,20 @@ testimonialsNav.querySelector('.--left').addEventListener('click', () => {
 
 let menuItems = [].slice.call(document.querySelectorAll('.header__menu-item'));
 
-menuItems.forEach((item) => {
-	item.firstElementChild.addEventListener('click', (e) => {
-		e.stopPropagation();
-		e.preventDefault();
-		
-		scrollView(item.getAttribute('data-section'));
-	});
-});
+if (window.location.pathname.split( '/' ).length < 3) {
 
-function scrollView(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+	menuItems.forEach((item) => {
+		item.firstElementChild.addEventListener('click', (e) => {
+			e.stopPropagation();
+			e.preventDefault();
+			
+			scrollView(item.getAttribute('data-section'));
+		});
+	});
+
+	function scrollView(sectionId) {
+	    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
 }
 
 /*=====  End of Menu Navigation  ======*/

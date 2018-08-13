@@ -10,4 +10,10 @@ exclude:
   - Gemfile
   - Gemfile.lock  
   - gulpfile.js
-  - node_modules  
+  - node_modules
+
+
+collections:
+  places:
+    output: true
+    permalink: /places/:path/
