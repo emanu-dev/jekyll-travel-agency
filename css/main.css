@@ -249,7 +249,10 @@ body.--locked {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: rgba(3, 6, 27, 0.9);
+    background-image: url("https://picsum.photos/500/600/?random");
+    background-position: center;
+    -webkit-background-size: cover;
+            background-size: cover;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -266,10 +269,14 @@ body.--locked {
     height: 100%;
     overflow: hidden;
     position: relative;
+    text-decoration: none;
     width: 100%;
     z-index: 5; }
     .places-menu .places-menu__item .text.--title {
       width: 60%; }
+      @media (max-width: 600px) {
+        .places-menu .places-menu__item .text.--title {
+          width: 80%; } }
     @media (max-width: 600px) {
       .places-menu .places-menu__item {
         height: 20vh; }
@@ -279,14 +286,11 @@ body.--locked {
     .places-menu .places-menu__item:hover {
       cursor: pointer; }
       .places-menu .places-menu__item:hover:before {
-        opacity: .5; }
+        opacity: .7; }
     .places-menu .places-menu__item:before {
-      background-image: url("https://picsum.photos/500/600/?random");
-      background-position: center;
-      -webkit-background-size: cover;
-              background-size: cover;
+      background-color: rgba(3, 6, 27, 0.9);
       content: "";
-      opacity: .25;
+      opacity: .9;
       height: 100%;
       position: absolute;
       -webkit-transition: opacity 300ms ease;
@@ -615,7 +619,6 @@ body.--locked {
       cursor: pointer; }
 
 .place .place__main {
-  background-image: url(../../images/places/funchal.jpg);
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center;
@@ -701,7 +704,6 @@ body.--locked {
         width: 100%; }
 
 .place .place__bottom {
-  background-image: url(../../images/places/funchal.jpg);
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center;
@@ -773,6 +775,10 @@ body.--locked {
     @media (max-width: 600px) {
       .header .header__contact {
         display: none; } }
+    .header .header__contact .header__contact-icon {
+      margin-left: .5rem;
+      height: .8rem;
+      width: .8rem; }
   .header .header__logo {
     height: 5rem;
     margin-right: 1.5rem;

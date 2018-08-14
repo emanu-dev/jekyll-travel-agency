@@ -1,30 +1,3 @@
----
-menu-items:
-- name: home
-  id: main-slider
-- name: grupo estanplaza
-  id: main-section 
-- name: espaços
-  id: places-section 
-  subitems:
-    - name: funchal
-      url: /places/funchal
-    - name: internacional
-      url: /places/internacional
-    - name: berrini
-      url: /places/berrini
-    - name: estanconfor veranda berrini
-      url: /places/veranda-berrini
-    - name: bar mirante
-      url: /places/mirante
-- name: gastronomia
-  id: food-section 
-- name: depoimentos
-  id: testimonials-section
-- name: contato
-  id: contact-section
----
-
 <!DOCTYPE html>
 <html lang="pt-Br">
 <head>
@@ -51,9 +24,13 @@ menu-items:
 <body>
 {% include header.html %}
 {% include main-gallery.html %}
-{% include section-container.html title="traga seu evento ao <strong> grupo estanplaza</strong>" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi.." section="main-section"%}
+{% include section-container.html 
+    title="traga seu evento ao <strong> grupo estanplaza</strong>" 
+    content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi.." section="main-section"%}
 {% include places-menu.html %}
-{% include section-container-reverse.html title="gastronomia" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi.." section="food-section" %}
+{% include section-container-reverse.html 
+    title="gastronomia" 
+    content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi.." section="food-section" %}
 {% include testimonials.html %}
 {% include contact.html title="agende seu evento" %}
 {% include footer.html %}

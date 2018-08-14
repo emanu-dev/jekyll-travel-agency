@@ -3,18 +3,18 @@
 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
   {% if thecycle == 'odd' %}
     {% if forloop.last %}
-		<div class="places-menu__item --line">
-			<h3 class="text --title --center --neg">{{item.title}}</h3>
-		</div>
+		<a href="{{ item.url }}" class='places-menu__item --line attr-bg' data-bg='{{item.image_path}}'>
+			<h3 class='text --title --center --neg'>{{item.title}}</h3>
+		</a>
     {% else %}
-		<div class="places-menu__item --left">
-			<h3 class="text --title --center --neg">{{item.title}}</h3>
-		</div>
+		<a href="{{ item.url }}" class='places-menu__item --left attr-bg' data-bg='{{item.image_path}}'>
+			<h3 class='text --title --center --neg'>{{item.title}}</h3>
+		</a>
     {% endif %}  
   {%else%}
-	<div class="places-menu__item --right">
-		<h3 class="text --title --center --neg">{{item.title}}</h3>
-	</div>
+	<a href="{{ item.url }}" class='places-menu__item --right attr-bg' data-bg='{{item.image_path}}'>
+		<h3 class='text --title --center --neg'>{{item.title}}</h3>
+	</a>
   {% endif %}
 {% endfor %}	
 </section>

@@ -24,17 +24,21 @@
 <body>
 <header class='header'>
 	<div class='header__contact'>
-		<p class='header__contact-text'>+55 11 3059 3277 - São Paulo Capital | 0800 726 1500 - Demais Localidades</p>
+		<p class='header__contact-text'>+55 11 3059 3277 - São Paulo Capital | 0800 726 1500 - Demais Localidades</p> 
+		<a href='http://instagram.com.br' target='_blank' alt='Acesse nosso instagram'>
+			<img class='header__contact-icon' src="/images/instagram-logo.svg" alt="">
+		</a>
 	</div>
-	<div class="header__nav">
-		<img src="/images/logo-neg.svg" alt="" class="header__logo">
+	<div class='header__nav'>
+		<a href='http://estanplaza.com.br' target='_blank' alt='Estanplaza Hotels'>
+			<img src="/images/logo-neg.svg" alt="" class="header__logo">
+		</a>
 		<div class="header__mobile --text">EVENTOS</div>
 		<button class="header__mobile --btn" id='mobile-menu-toggle'></button>
-		</v-container>
 		<ul class='header__menu' id='mobile-menu'>
 			
 			    <li class='header__menu-item' data-section='main-slider'>
-			    	<a href="/#">home
+			    	<a href="/#">eventos
 			    		
 			    	</a>
 			    	
@@ -96,7 +100,7 @@
 	</div>
 </header>
 <div class="place" id='place-section'>
-	<div class="place__main" id='place-main' data-bg='https://upload.wikimedia.org/wikipedia/commons/f/fa/Freshly_baked_gingerbread_-_Christmas_2004.jpg'>
+	<div class="place__main attr-bg" id='place-main' data-bg='../../images/places/internacional.jpg'>
 		<div class="place__header">
 			<h2 class="place__title">Estanplaza Internacional</h2>
 			<div class="place__header-divider"></div>
@@ -140,7 +144,7 @@
 			
 		</div>
 	</div>
-	<div class="place__bottom">
+	<div class="place__bottom attr-bg" data-bg='../../images/places/internacional.jpg'>
 		<div class="place__footer">
 			<h2 class="place__title">Estanplaza Internacional</h2>
 			<div class="place__header-divider"></div>
@@ -172,7 +176,9 @@
 	</div>
 </section>
 <footer class='footer'>
-	<img class='footer__logo' src='/images/logo-neg.svg' alt="">
+	<a href='http://estanplaza.com.br' target='_blank' alt='Estanplaza Hotels'>
+		<img class='footer__logo' src='/images/logo-neg.svg' alt="">
+	</a>
 </footer>
 </body>
 <script src="/javascript/lib.min.js"></script>

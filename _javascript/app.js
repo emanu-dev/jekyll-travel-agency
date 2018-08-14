@@ -384,3 +384,23 @@ if (galleryItems) {
 
 /*=====  End of Gallery  ======*/
 
+/*===============================================
+=            Attribute to Background            =
+===============================================*/
+
+const bgElements = [].slice.call(document.querySelectorAll('.attr-bg'));
+
+if (bgElements.length > 0) {
+	bgElements.forEach((element) => {
+		attrToBg(element);
+	});
+}
+
+function attrToBg(element) {
+	const bgPath = element.getAttribute('data-bg');
+	element.style.backgroundImage = `url(${bgPath})`;
+}
+
+/*=====  End of Attribute to Background  ======*/
+
+

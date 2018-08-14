@@ -17,3 +17,28 @@ collections:
   places:
     output: true
     permalink: /places/:path/
+
+menu-items:
+- name: eventos
+  id: main-slider
+- name: grupo estanplaza
+  id: main-section 
+- name: espaços
+  id: places-section 
+  subitems:
+    - name: funchal
+      url: /places/funchal
+    - name: internacional
+      url: /places/internacional
+    - name: berrini
+      url: /places/berrini
+    - name: estanconfor veranda berrini
+      url: /places/veranda-berrini
+    - name: bar mirante
+      url: /places/mirante
+- name: gastronomia
+  id: food-section 
+- name: depoimentos
+  id: testimonials-section
+- name: contato
+  id: contact-section

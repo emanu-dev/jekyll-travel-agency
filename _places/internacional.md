@@ -1,7 +1,7 @@
 ---
 layout: places
 title: Estanplaza Internacional
-image_path: https://upload.wikimedia.org/wikipedia/commons/f/fa/Freshly_baked_gingerbread_-_Christmas_2004.jpg
+image_path: ../../images/places/internacional.jpg
 address: Rua Funchal, 281, Vila Olímpia <br> São Paulo - SP - Brasil
 gallery:
   - thumb: https://source.unsplash.com/random/400x320

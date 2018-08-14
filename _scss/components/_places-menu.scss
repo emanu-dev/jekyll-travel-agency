@@ -11,18 +11,25 @@
 
 	.places-menu__item {
 		align-items: center;
-		background-color: rgba($main-brand, .9);
+		background-image: url('https://picsum.photos/500/600/?random');
+		background-position: center;
+		background-size: cover;
 		display: flex;
 		flex-direction: center;
 		justify-content: center;
 		height: 100%;
 		overflow: hidden;
 		position: relative;
+		text-decoration: none;
 		width: 100%;
 		z-index: 5;
 
 		.text.--title {
 			width: 60%;
+
+			@media (max-width: 600px) {
+				width: 80%;
+			}
 		}
 
 		@media (max-width: 600px) {
@@ -38,16 +45,14 @@
 			cursor: pointer;
 			
 			&:before {
-				opacity: .5;
+				opacity: .7;
 			}
 		}
 		
 		&:before {
-			background-image: url('https://picsum.photos/500/600/?random');
-			background-position: center;
-			background-size: cover;					
+			background-color: rgba($main-brand, .9);
 			content: "";
-			opacity: .25;
+			opacity: .9;
 			height: 100%;
 			position: absolute;
 			transition: opacity 300ms ease;
