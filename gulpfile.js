@@ -16,10 +16,15 @@ let messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
+let styles = [
+    './node_modules/basiclightbox/dist/basicLightbox.min.css'
+];
+
 let scripts = [
     './node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js',
     './node_modules/vanilla-masker/build/vanilla-masker.min.js',
-    './node_modules/vanilla-lazyload/dist/lazyload.iife.js'
+    './node_modules/vanilla-lazyload/dist/lazyload.iife.js',
+    './node_modules/basiclightbox/dist/basicLightbox.min.js'
 ];
 
 gulp.task('clean:js', () => {
@@ -95,17 +100,21 @@ gulp.task('browser-sync', ['sass'], () => {
 });
 
 gulp.task('sass', () => {
-    return gulp.src('_scss/main.scss')
+    return eventStream.merge([
+        gulp.src('_scss/main.scss')
         .pipe(sass({
             includePaths: ['scss'],
         }))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })),        
+        gulp.src(styles)
+    ])
         .on('error',
             notify.onError({
                     title: 'Sass error',
                     message: '<%= error.message %>'
             })
         )        
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(concat('main.css'))
         .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('css'));

@@ -1,17 +1,20 @@
 <section class='places-menu' id='places-section'>
-	<div class="places-menu__item --left">
-		<h3 class="text --title --center --neg">Estanplaza <br> <strong>Funchal</strong></h3>
-	</div>
+{% for item in site.places %}
+{% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  {% if thecycle == 'odd' %}
+    {% if forloop.last %}
+		<div class="places-menu__item --line">
+			<h3 class="text --title --center --neg">{{item.title}}</h3>
+		</div>
+    {% else %}
+		<div class="places-menu__item --left">
+			<h3 class="text --title --center --neg">{{item.title}}</h3>
+		</div>
+    {% endif %}  
+  {%else%}
 	<div class="places-menu__item --right">
-		<h3 class="text --title --center --neg">Estanplaza <br> <strong>Internacional</strong></h3>
+		<h3 class="text --title --center --neg">{{item.title}}</h3>
 	</div>
-	<div class="places-menu__item --left">
-		<h3 class="text --title --center --neg">Gran Estanplaza <br> <strong>Berrini</strong></h3>
-	</div>
-	<div class="places-menu__item --right">
-		<h3 class="text --title --center --neg">Gran Estanconfor <br> <strong>Veranda Berrini</strong></h3>
-	</div>
-	<div class="places-menu__item --line">
-		<h3 class="text --title --center --neg">Bar <strong>Mirante</strong></h3>
-	</div>
+  {% endif %}
+{% endfor %}	
 </section>

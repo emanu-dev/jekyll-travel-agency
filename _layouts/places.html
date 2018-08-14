@@ -10,12 +10,15 @@ layout: page
 	</div>
 	{% include section-container.html title="características <strong>gerais</strong>" content=page.content%}
 	<div class="place__gallery">
-		<div class="place__gallery-container">
+		<div class="place__gallery-container" id='place-gallery'>
 			{% for item in page.gallery %}
 			<div class="place__gallery-item" data-media='{{item.media_url}}'>
 				<img src="{{item.thumb}}" alt="">
 			</div>
 			{% endfor %}
 		</div>
+	</div>
+	<div class="place__bottom">
+		
 	</div>
 </div>

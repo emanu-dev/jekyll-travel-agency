@@ -21,6 +21,10 @@
 		width: 100%;
 		z-index: 5;
 
+		.text.--title {
+			width: 60%;
+		}
+
 		@media (max-width: 600px) {
 			height: 20vh;
 
