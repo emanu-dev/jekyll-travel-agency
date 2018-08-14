@@ -17,28 +17,27 @@
 			@media (max-width: 800px) {
 				height: 50%;
 			}
-
-
-			.place__title {
-				color: #ffffff;
-				font-family: 'Lato-Thin';
-				font-size: 2.5rem;
-				text-align: center;
-				text-transform: uppercase;
-
-				@media (max-width: 800px) {
-					font-size: 2rem;
-				}
-			}
-
-			.place__header-divider {
-				background-color: #ffffff;
-				height: .1rem;
-				margin: 1rem 0;
-				width: 30%;
-			}			
 		}
 	}
+
+	.place__title {
+		color: #ffffff;
+		font-family: 'Lato-Thin';
+		font-size: 2.5rem;
+		text-align: center;
+		text-transform: uppercase;
+
+		@media (max-width: 800px) {
+			font-size: 2rem;
+		}
+	}
+
+	.place__header-divider {
+		background-color: #ffffff;
+		height: .1rem;
+		margin: 1rem 0;
+		width: 30%;
+	}	
 
 	.place__gallery {
 		background-color: #fcfcfc;
@@ -76,6 +75,34 @@
 
 		}
 
+	}
 
+	.place__bottom {
+		background-image: url(../../images/places/funchal.jpg);
+		background-size: cover;
+		background-position: center;		
+		height: 100vh;
+		position: relative;
+
+		.place__footer {
+			align-items: center;
+			background-color: rgba($main-brand, .9);
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+			height: 30%;
+			width: 100%;
+			justify-content: center;
+			position: absolute;
+
+			@media (max-width: 800px) {
+				height: 50%;
+			}
+
+			>.text.--body {
+				text-align: center;
+				width: 40%;
+			}
+		}
 	}
 }

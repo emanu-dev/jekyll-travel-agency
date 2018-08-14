@@ -2,6 +2,7 @@
 layout: places
 title: Gran Estanplaza Berrini
 image_path: ../../images/places/berrini.jpg
+address: Rua Funchal, 281, Vila Olímpia <br> São Paulo - SP - Brasil
 gallery:
   - thumb: https://source.unsplash.com/random/400x320
     media_url: https://source.unsplash.com/random/400x320

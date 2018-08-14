@@ -644,20 +644,22 @@ body.--locked {
     @media (max-width: 800px) {
       .place .place__main .place__header {
         height: 50%; } }
-    .place .place__main .place__header .place__title {
-      color: #ffffff;
-      font-family: 'Lato-Thin';
-      font-size: 2.5rem;
-      text-align: center;
-      text-transform: uppercase; }
-      @media (max-width: 800px) {
-        .place .place__main .place__header .place__title {
-          font-size: 2rem; } }
-    .place .place__main .place__header .place__header-divider {
-      background-color: #ffffff;
-      height: .1rem;
-      margin: 1rem 0;
-      width: 30%; }
+
+.place .place__title {
+  color: #ffffff;
+  font-family: 'Lato-Thin';
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase; }
+  @media (max-width: 800px) {
+    .place .place__title {
+      font-size: 2rem; } }
+
+.place .place__header-divider {
+  background-color: #ffffff;
+  height: .1rem;
+  margin: 1rem 0;
+  width: 30%; }
 
 .place .place__gallery {
   background-color: #fcfcfc;
@@ -697,6 +699,43 @@ body.--locked {
       .place .place__gallery .place__gallery-container .place__gallery-item > img {
         height: auto;
         width: 100%; }
+
+.place .place__bottom {
+  background-image: url(../../images/places/funchal.jpg);
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative; }
+  .place .place__bottom .place__footer {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(3, 6, 27, 0.9);
+    bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 30%;
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute; }
+    @media (max-width: 800px) {
+      .place .place__bottom .place__footer {
+        height: 50%; } }
+    .place .place__bottom .place__footer > .text.--body {
+      text-align: center;
+      width: 40%; }
 
 .header {
   display: -webkit-box;
