@@ -1,14 +1,18 @@
 <header class='header'>
 	<div class='header__contact'>
-		<p class='header__contact-text'>+55 11 3059 3277 - São Paulo Capital | 0800 726 1500 - Demais Localidades</p>
+		<p class='header__contact-text'>+55 11 3059 3277 - São Paulo Capital | 0800 726 1500 - Demais Localidades</p> 
+		<a href='http://instagram.com.br' target='_blank' alt='Acesse nosso instagram'>
+			<img class='header__contact-icon' src="{{ "/images/instagram-logo.svg" | relative_url }}" alt="">
+		</a>
 	</div>
-	<div class="header__nav">
-		<img src="{{ "/images/logo-neg.svg" | relative_url }}" alt="" class="header__logo">
+	<div class='header__nav'>
+		<a href='http://estanplaza.com.br' target='_blank' alt='Estanplaza Hotels'>
+			<img src="{{ "/images/logo-neg.svg" | relative_url }}" alt="" class="header__logo">
+		</a>
 		<div class="header__mobile --text">EVENTOS</div>
 		<button class="header__mobile --btn" id='mobile-menu-toggle'></button>
-		</v-container>
 		<ul class='header__menu' id='mobile-menu'>
-			{% for item in layout.menu-items %}
+			{% for item in site.menu-items %}
 			    <li class='header__menu-item' data-section='{{ item.id }}'>
 			    	<a href="/#">{{ item.name }}
 			    		{% if item.subitems %}
