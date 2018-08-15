@@ -1,20 +1,10 @@
-<div class="slider" id='main-slider'>
+<div class="slider" id='home'>
 	<ul class="slider__list">
-		<li class="slider__list-item">
-			<div data-src="images/slide1.jpg" alt="" style='background-image: url("images/slide1.jpg");' class="slider__list-img"></div>
-		</li>
-		<li class="slider__list-item">
-			<div data-src="images/slide2.jpg" alt="" style='background-image: url("images/slide2.jpg");' class="slider__list-img"></div>
-		</li>
-		<li class="slider__list-item">
-			<div data-src="images/slide3.jpg" alt="" style='background-image: url("images/slide3.jpg");' class="slider__list-img"></div>
-		</li>
-		<li class="slider__list-item">
-			<div data-src="images/slide4.jpg" alt="" style='background-image: url("images/slide4.jpg");' class="slider__list-img"></div>
-		</li>
-		<li class="slider__list-item">
-			<div data-src="images/slide5.jpg" alt="" style='background-image: url("images/slide5.jpg");' class="slider__list-img"></div>
-		</li>
+		{% for slide in site.slides %}
+			<li class="slider__list-item">
+				<div class="slider__list-img lazy" data-src='{{ slide.img_url }}'></div>
+			</li>		
+		{% endfor %}
 	</ul>
 	<div class='slider__nav' id='slider-nav'></div>
 </div>

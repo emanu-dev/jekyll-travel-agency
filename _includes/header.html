@@ -14,7 +14,7 @@
 		<ul class='header__menu' id='mobile-menu'>
 			{% for item in site.menu-items %}
 			    <li class='header__menu-item' data-section='{{ item.id }}'>
-			    	<a href="/#">{{ item.name }}
+			    	<a href="/#/{{ item.id }}">{{ item.name }}
 			    		{% if item.subitems %}
 			    			<span class='icon --no-mobile'>▼</span>
 						{% endif %}

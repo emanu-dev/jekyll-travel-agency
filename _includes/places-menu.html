@@ -1,18 +1,18 @@
-<section class='places-menu' id='places-section'>
+<section class='places-menu' id='places-menu'>
 {% for item in site.places %}
 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
   {% if thecycle == 'odd' %}
     {% if forloop.last %}
-		<a href="{{ item.url }}" class='places-menu__item --line attr-bg' data-bg='{{item.image_path}}'>
+		<a href="{{ item.url }}" class='places-menu__item --line lazy' data-src='{{item.image_path}}'>
 			<h3 class='text --title --center --neg'>{{item.title}}</h3>
 		</a>
     {% else %}
-		<a href="{{ item.url }}" class='places-menu__item --left attr-bg' data-bg='{{item.image_path}}'>
+		<a href="{{ item.url }}" class='places-menu__item --left lazy' data-src='{{item.image_path}}'>
 			<h3 class='text --title --center --neg'>{{item.title}}</h3>
 		</a>
     {% endif %}  
   {%else%}
-	<a href="{{ item.url }}" class='places-menu__item --right attr-bg' data-bg='{{item.image_path}}'>
+	<a href="{{ item.url }}" class='places-menu__item --right lazy' data-src='{{item.image_path}}'>
 		<h3 class='text --title --center --neg'>{{item.title}}</h3>
 	</a>
   {% endif %}

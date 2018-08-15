@@ -18,13 +18,20 @@ collections:
     output: true
     permalink: /places/:path/
 
+slides:
+  - img_url: images/slide1.jpg
+  - img_url: images/slide2.jpg
+  - img_url: images/slide3.jpg
+  - img_url: images/slide4.jpg
+  - img_url: images/slide5.jpg
+
 menu-items:
 - name: eventos
-  id: main-slider
+  id: home
 - name: grupo estanplaza
-  id: main-section 
+  id: about
 - name: espaços
-  id: places-section 
+  id: places-menu 
   subitems:
     - name: funchal
       url: /places/funchal
@@ -37,8 +44,8 @@ menu-items:
     - name: bar mirante
       url: /places/mirante
 - name: gastronomia
-  id: food-section 
+  id: gastronomy
 - name: depoimentos
-  id: testimonials-section
+  id: testimonials
 - name: contato
-  id: contact-section
+  id: contact

@@ -1,3 +1,5 @@
+import test from 'modules/test.module';
+
 /*=================================
 =            Polyfills            =
 =================================*/
@@ -46,7 +48,7 @@ mobileMenuToggle.addEventListener('click', () => {
 =            Slider            =
 ==============================*/
 
-const slider = document.getElementById('main-slider');
+const slider = document.getElementById('home');
 
 if (slider) {
 
@@ -122,7 +124,7 @@ slider.addEventListener('mouseleave', () =>{
 /*==============================
 =      Testimonials Slider    =
 ==============================*/
-const testimonialSection = document.getElementById('testimonials-section');
+const testimonialSection = document.getElementById('testimonials');
 if (testimonialSection) {
 
 	const testimonialList = document.getElementById('testimonial-list');
@@ -194,6 +196,7 @@ if (window.location.pathname.split( '/' ).length < 3) {
 			e.preventDefault();
 			
 			scrollView(item.getAttribute('data-section'));
+			window.location.hash = `/${item.getAttribute('data-section')}`;
 		});
 	});
 
@@ -396,6 +399,7 @@ if (bgElements.length > 0) {
 	});
 }
 
+
 function attrToBg(element) {
 	const bgPath = element.getAttribute('data-bg');
 	element.style.backgroundImage = `url(${bgPath})`;
@@ -403,4 +407,17 @@ function attrToBg(element) {
 
 /*=====  End of Attribute to Background  ======*/
 
+window.onload = () => {
+	
+	const myLazyLoad = new LazyLoad({
+		elements_selector: ".lazy",
+	    load_delay: 250
+	});
 
+
+	const section = window.location.hash.substring(2);
+
+	if (document.getElementById(section)) {
+		document.getElementById(section).scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
+};

@@ -1,6 +1,6 @@
 .testimonials {
 	align-items: center;
-	background-image: url('https://picsum.photos/856/720');
+	background-image: url('../../images/testimonial.jpg');
 	background-size: cover;
 	background-position: center;
 	display: flex;
@@ -115,6 +115,10 @@
 		position: absolute;
 		width: 100%;
 		z-index: 9;
+
+		@media (max-width: 600px) {
+			padding: 0 1%;
+		}
 
 		.testimonials__nav-item {
 			cursor: pointer;

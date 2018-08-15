@@ -44,6 +44,12 @@
 				font-family: 'Lato-Medium';
 				text-decoration: none;
 			}
+
+			> em {
+				color: $main-brand;
+				font: inherit;
+				font-style: italic;
+			}
 		}
 
 		.section__content-divider {
@@ -65,8 +71,8 @@
 		}
 	}
 	.section__image {
-		background-image: url('https://picsum.photos/600/700');
 		background-size: cover;
+		background-position: center;
 		height: 100%;
 		width: 100%;
 

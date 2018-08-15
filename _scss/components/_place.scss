@@ -56,9 +56,13 @@
 			}
 
 			.place__gallery-item {
+				background-image: url(../../images/loading.svg);
+				background-size: cover;
+				background-position: center;
 			    display: inline-block;
 			    margin: 0 0 1rem;
 			    transition: transform 300ms ease;
+			    min-height: 8rem;
 			    width: 100%;
 
 			    &:hover {

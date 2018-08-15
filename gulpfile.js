@@ -23,7 +23,7 @@ let styles = [
 let scripts = [
     './node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js',
     './node_modules/vanilla-masker/build/vanilla-masker.min.js',
-    './node_modules/vanilla-lazyload/dist/lazyload.iife.js',
+    './node_modules/vanilla-lazyload/dist/lazyload.min.js',
     './node_modules/basiclightbox/dist/basicLightbox.min.js'
 ];
 
@@ -36,11 +36,9 @@ gulp.task('js', () => {
     gulp.src('_javascript/**/*.js')
         .pipe(babel({
             presets: ['env']
-        })),
-        gulp.src(scripts)
+        }))
     ])
     .pipe(sourcemaps.init())
-    .pipe(concat('app.min.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('_site/javascript/'))
     .pipe(browserSync.reload({stream:true}))
@@ -123,7 +121,7 @@ gulp.task('sass', () => {
 
 gulp.task('watch', () => {
     gulp.watch(['_scss/*.scss', '_scss/**/*.scss'], ['sass']);
-    gulp.watch(['_javascript/*.js'], ['js']);
+    gulp.watch(['_javascript/**/*.js'], ['js']);
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 

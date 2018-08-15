@@ -4,16 +4,16 @@ title: Estanplaza Internacional
 image_path: ../../images/places/internacional.jpg
 address: Rua Funchal, 281, Vila Olímpia <br> São Paulo - SP - Brasil
 gallery:
-  - thumb: https://source.unsplash.com/random/400x320
-    media_url: https://source.unsplash.com/random/400x320
-  - thumb: https://source.unsplash.com/random/640x480
-    media_url: https://source.unsplash.com/random/640x480
-  - thumb: https://source.unsplash.com/random/720x480
-    media_url: https://source.unsplash.com/random/720x480
-  - thumb: https://source.unsplash.com/random/400x320
-    media_url: https://source.unsplash.com/random/400x320
-  - thumb: https://source.unsplash.com/random/640x480
-    media_url: https://source.unsplash.com/random/640x480
+  - thumb: http://via.placeholder.com/400x320
+    media_url: http://via.placeholder.com/400x320
+  - thumb: http://via.placeholder.com/640x480
+    media_url: http://via.placeholder.com/640x480
+  - thumb: http://via.placeholder.com/720x480
+    media_url: http://via.placeholder.com/720x480
+  - thumb: http://via.placeholder.com/400x320
+    media_url: http://via.placeholder.com/400x320
+  - thumb: http://via.placeholder.com/640x480
+    media_url: http://via.placeholder.com/640x480
 ---
 
 A ginger biscuit, ginger nut or ginger snap is a globally popular biscuit based snack food, flavoured with ginger.

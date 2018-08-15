@@ -8,12 +8,16 @@ layout: page
 			<div class="place__header-divider"></div>
 		</div>
 	</div>
-	{% include section-container.html title="características <strong>gerais</strong>" content=page.content%}
+	{% include section-container.html 
+		title="características <strong>gerais</strong>" 
+		content=page.content
+		bg=page.image_path
+	%}
 	<div class="place__gallery">
 		<div class="place__gallery-container" id='place-gallery'>
 			{% for item in page.gallery %}
 			<div class="place__gallery-item" data-media='{{item.media_url}}'>
-				<img src="{{item.thumb}}" alt="">
+				<img class='lazy' src='/images/loading.svg' data-src="{{item.thumb}}" alt="">
 			</div>
 			{% endfor %}
 		</div>
