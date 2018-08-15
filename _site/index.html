@@ -37,22 +37,22 @@
 		<button class="header__mobile --btn" id='mobile-menu-toggle'></button>
 		<ul class='header__menu' id='mobile-menu'>
 			
-			    <li class='header__menu-item' data-section='main-slider'>
-			    	<a href="/#">eventos
+			    <li class='header__menu-item' data-section='home'>
+			    	<a href="/#/home">eventos
 			    		
 			    	</a>
 			    	
 			    </li>
 			
-			    <li class='header__menu-item' data-section='main-section'>
-			    	<a href="/#">grupo estanplaza
+			    <li class='header__menu-item' data-section='about'>
+			    	<a href="/#/about">grupo estanplaza
 			    		
 			    	</a>
 			    	
 			    </li>
 			
-			    <li class='header__menu-item' data-section='places-section'>
-			    	<a href="/#">espaços
+			    <li class='header__menu-item' data-section='places-menu'>
+			    	<a href="/#/places-menu">espaços
 			    		
 			    			<span class='icon --no-mobile'>▼</span>
 						
@@ -74,22 +74,22 @@
 			    	
 			    </li>
 			
-			    <li class='header__menu-item' data-section='food-section'>
-			    	<a href="/#">gastronomia
+			    <li class='header__menu-item' data-section='gastronomy'>
+			    	<a href="/#/gastronomy">gastronomia
 			    		
 			    	</a>
 			    	
 			    </li>
 			
-			    <li class='header__menu-item' data-section='testimonials-section'>
-			    	<a href="/#">depoimentos
+			    <li class='header__menu-item' data-section='testimonials'>
+			    	<a href="/#/testimonials">depoimentos
 			    		
 			    	</a>
 			    	
 			    </li>
 			
-			    <li class='header__menu-item' data-section='contact-section'>
-			    	<a href="/#">contato
+			    <li class='header__menu-item' data-section='contact'>
+			    	<a href="/#/contact">contato
 			    		
 			    	</a>
 			    	
@@ -99,40 +99,46 @@
 	<div class="header__overlay"></div>
 	</div>
 </header>
-<div class="slider" id='main-slider'>
+<div class="slider" id='home'>
 	<ul class="slider__list">
-		<li class="slider__list-item">
-			<div data-src="images/slide1.jpg" alt="" style='background-image: url("images/slide1.jpg");' class="slider__list-img"></div>
-		</li>
-		<li class="slider__list-item">
-			<div data-src="images/slide2.jpg" alt="" style='background-image: url("images/slide2.jpg");' class="slider__list-img"></div>
-		</li>
-		<li class="slider__list-item">
-			<div data-src="images/slide3.jpg" alt="" style='background-image: url("images/slide3.jpg");' class="slider__list-img"></div>
-		</li>
-		<li class="slider__list-item">
-			<div data-src="images/slide4.jpg" alt="" style='background-image: url("images/slide4.jpg");' class="slider__list-img"></div>
-		</li>
-		<li class="slider__list-item">
-			<div data-src="images/slide5.jpg" alt="" style='background-image: url("images/slide5.jpg");' class="slider__list-img"></div>
-		</li>
+		
+			<li class="slider__list-item">
+				<div class="slider__list-img lazy" data-src='images/slide1.jpg'></div>
+			</li>		
+		
+			<li class="slider__list-item">
+				<div class="slider__list-img lazy" data-src='images/slide2.jpg'></div>
+			</li>		
+		
+			<li class="slider__list-item">
+				<div class="slider__list-img lazy" data-src='images/slide3.jpg'></div>
+			</li>		
+		
+			<li class="slider__list-item">
+				<div class="slider__list-img lazy" data-src='images/slide4.jpg'></div>
+			</li>		
+		
+			<li class="slider__list-item">
+				<div class="slider__list-img lazy" data-src='images/slide5.jpg'></div>
+			</li>		
+		
 	</ul>
 	<div class='slider__nav' id='slider-nav'></div>
 </div>
-<section class='section' id='main-section'>
-	<div class="section__content">
+<section class='section' id='about'>
+	<div class='section__content'>
 		<h2 class='text --title --center'>traga seu evento ao <strong> grupo estanplaza</strong></h2>
 		<div class="section__content-divider"></div>
 		<p class='text --body --center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi..</p>
 	</div>
-	<div class="section__image"></div>
+	<div class='section__image attr-bg lazy' data-bg='../../images/eventos_enc.jpg'></div>
 </section>
-<section class='places-menu' id='places-section'>
+<section class='places-menu' id='places-menu'>
 
 
   
     
-		<a href="/places/berrini/" class='places-menu__item --left attr-bg' data-bg='../../images/places/berrini.jpg'>
+		<a href="/places/berrini/" class='places-menu__item --left lazy' data-src='../../images/places/berrini.jpg'>
 			<h3 class='text --title --center --neg'>Gran Estanplaza Berrini</h3>
 		</a>
       
@@ -140,7 +146,7 @@
 
 
   
-	<a href="/places/funchal/" class='places-menu__item --right attr-bg' data-bg='../../images/places/funchal.jpg'>
+	<a href="/places/funchal/" class='places-menu__item --right lazy' data-src='../../images/places/funchal.jpg'>
 		<h3 class='text --title --center --neg'>Estanplaza Funchal</h3>
 	</a>
   
@@ -148,7 +154,7 @@
 
   
     
-		<a href="/places/internacional/" class='places-menu__item --left attr-bg' data-bg='../../images/places/internacional.jpg'>
+		<a href="/places/internacional/" class='places-menu__item --left lazy' data-src='../../images/places/internacional.jpg'>
 			<h3 class='text --title --center --neg'>Estanplaza Internacional</h3>
 		</a>
       
@@ -156,7 +162,7 @@
 
 
   
-	<a href="/places/mirante/" class='places-menu__item --right attr-bg' data-bg='../../images/places/funchal.jpg'>
+	<a href="/places/mirante/" class='places-menu__item --right lazy' data-src='../../images/places/funchal.jpg'>
 		<h3 class='text --title --center --neg'>Bar Mirante</h3>
 	</a>
   
@@ -164,22 +170,22 @@
 
   
     
-		<a href="/places/veranda-berrini/" class='places-menu__item --line attr-bg' data-bg='../../images/places/funchal.jpg'>
+		<a href="/places/veranda-berrini/" class='places-menu__item --line lazy' data-src='../../images/places/funchal.jpg'>
 			<h3 class='text --title --center --neg'>Gran Estanconfor Veranda Berrini</h3>
 		</a>
       
   
 	
 </section>
-<section class='section' id='food-section'>
-	<div class="section__image"></div>
+<section class='section' id='gastronomy'>
+	<div class="section__image attr-bg lazy" data-bg='../../images/food.jpg'></div>
 	<div class="section__content">
 		<h2 class='text --title --center'>gastronomia</h2>
 		<div class="section__content-divider"></div>
 		<p class='text --body --center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi..</p>
 	</div>	
 </section>
-<section class='testimonials' id='testimonials-section'>
+<section class='testimonials lazy' id='testimonials'>
 		<ul class='testimonials__list' id='testimonial-list'>
 			<li class="testimonials__item">
 				<p class='testimonials__item-text'>"Lorem ipsum dolor sit amet!1"</p>
@@ -207,8 +213,8 @@
 			<div class="testimonials__nav-item --right">></div>
 		</div>
 </section>
-<section class='contact' id='contact-section'>
-	<div class='contact__image'></div>
+<section class='contact' id='contact'>
+	<div class='contact__image lazy'></div>
 	<div class='contact__form'>
 		<h2 class='text --title --center'>agende seu evento</h2>
 		<div class='contact__form-divider'></div>
@@ -236,5 +242,5 @@
 </footer>
 </body>
 <script src="/javascript/lib.min.js"></script>
-<script src="/javascript/app.min.js"></script>
+<script src="/javascript/app.js"></script>
 </html>

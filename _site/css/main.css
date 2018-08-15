@@ -53,14 +53,17 @@ table {
 
 @font-face {
   font-family: 'Lato-Bold';
+  font-display: fallback;
   src: url(../fonts/Lato-Bold.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Lato-Medium';
+  font-display: fallback;
   src: url(../fonts/Lato-Regular.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Lato-Thin';
+  font-display: fallback;
   src: url(../fonts/Lato-Light.ttf) format("truetype"); }
 
 body.--locked {
@@ -204,6 +207,10 @@ body.--locked {
         font: inherit;
         font-family: 'Lato-Medium';
         text-decoration: none; }
+      .section .section__content > p > em {
+        color: #03061b;
+        font: inherit;
+        font-style: italic; }
     .section .section__content .section__content-divider {
       background-color: #03061b;
       height: .1rem;
@@ -219,9 +226,9 @@ body.--locked {
       left: 10%;
       pointer-events: none; }
   .section .section__image {
-    background-image: url("https://picsum.photos/600/700");
     -webkit-background-size: cover;
             background-size: cover;
+    background-position: center;
     height: 100%;
     width: 100%; }
     @media (max-width: 600px) {
@@ -249,7 +256,6 @@ body.--locked {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    background-image: url("https://picsum.photos/500/600/?random");
     background-position: center;
     -webkit-background-size: cover;
             background-size: cover;
@@ -336,7 +342,7 @@ body.--locked {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("https://picsum.photos/856/720");
+  background-image: url("../../images/testimonial.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center;
@@ -476,6 +482,9 @@ body.--locked {
     position: absolute;
     width: 100%;
     z-index: 9; }
+    @media (max-width: 600px) {
+      .testimonials .testimonials__nav {
+        padding: 0 1%; } }
     .testimonials .testimonials__nav .testimonials__nav-item {
       cursor: pointer;
       -webkit-transform: scaleX(0.5);
@@ -538,9 +547,10 @@ body.--locked {
       left: 10%;
       pointer-events: none; }
   .contact .contact__image {
-    background-image: url("https://picsum.photos/600/700");
+    background-image: url("../../images/contact.jpg");
     -webkit-background-size: cover;
             background-size: cover;
+    background-position: center;
     height: 100%;
     width: 100%; }
     @media (max-width: 600px) {
@@ -686,6 +696,10 @@ body.--locked {
            -moz-column-count: 2;
                 column-count: 2; } }
     .place .place__gallery .place__gallery-container .place__gallery-item {
+      background-image: url(../../images/loading.svg);
+      -webkit-background-size: cover;
+              background-size: cover;
+      background-position: center;
       display: inline-block;
       margin: 0 0 1rem;
       -webkit-transition: -webkit-transform 300ms ease;
@@ -693,6 +707,7 @@ body.--locked {
       -o-transition: transform 300ms ease;
       transition: transform 300ms ease;
       transition: transform 300ms ease, -webkit-transform 300ms ease;
+      min-height: 8rem;
       width: 100%; }
       .place .place__gallery .place__gallery-container .place__gallery-item:hover {
         cursor: pointer;
@@ -754,6 +769,10 @@ body.--locked {
   width: 100%;
   z-index: 999; }
   .header .header__contact {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -774,7 +793,10 @@ body.--locked {
       font-size: .8rem; }
     @media (max-width: 600px) {
       .header .header__contact {
-        display: none; } }
+        padding: .5rem .5rem; }
+        .header .header__contact .header__contact-text {
+          font-size: .6rem;
+          text-align: right; } }
     .header .header__contact .header__contact-icon {
       margin-left: .5rem;
       height: .8rem;
@@ -808,7 +830,7 @@ body.--locked {
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: 8rem;
+    height: 6rem;
     padding: 0 4rem;
     width: 100vw; }
     @media (min-width: 801px) {
