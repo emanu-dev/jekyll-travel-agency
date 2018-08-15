@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "jekyll:build" : "jekyll build"
+    "jekyll:build": "jekyll build",
+    "parcel:build": "parcel build _javascript/app.js --out-dir _site/javascript"
   },
   "author": "Emanuel Prado",
   "license": "ISC",
@@ -28,6 +29,7 @@
   },
   "dependencies": {
     "basiclightbox": "^4.0.3",
+    "modules": "^0.4.0",
     "smoothscroll-polyfill": "^0.4.3",
     "vanilla-lazyload": "^10.15.0",
     "vanilla-masker": "^1.2.0"
