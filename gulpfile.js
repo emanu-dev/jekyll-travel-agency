@@ -24,26 +24,9 @@ let scripts = [
     './node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js',
     './node_modules/vanilla-masker/build/vanilla-masker.min.js',
     './node_modules/vanilla-lazyload/dist/lazyload.min.js',
-    './node_modules/basiclightbox/dist/basicLightbox.min.js'
+    './node_modules/basiclightbox/dist/basicLightbox.min.js',
+    './node_modules/axios/dist/axios.min.js'
 ];
-
-// gulp.task('clean:js', () => {
-//     return gulp.src('./public/scripts/app.min.js').pipe(clean());
-// });
-
-// gulp.task('js', () => {
-//     return eventStream.merge([
-//     gulp.src('_javascript/**/*.js')
-//         .pipe(babel({
-//             presets: ['env']
-//         }))
-//     ])
-//     .pipe(sourcemaps.init())
-//     .pipe(sourcemaps.write('.'))
-//     .pipe(gulp.dest('_site/javascript/'))
-//     .pipe(browserSync.reload({stream:true}))
-//     .pipe(gulp.dest('javascript/'));
-// });
 
 gulp.task('clean:libjs', () => {
     return gulp.src('./public/scripts/lib.min.js').pipe(clean());
@@ -121,7 +104,6 @@ gulp.task('sass', () => {
 
 gulp.task('watch', () => {
     gulp.watch(['_scss/*.scss', '_scss/**/*.scss'], ['sass']);
-    // gulp.watch(['_javascript/**/*.js'], ['js']);
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 

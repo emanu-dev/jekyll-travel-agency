@@ -15,8 +15,10 @@
 			<textarea class='form__input --textarea --span-line' id='input-msg' data-placeholder='Mensagem' name='msg'></textarea>
 			<div class='form__fakelabel' id='fake-label' data-input='input-msg'>Mensagem</div>
 			<input class='form__input' type='text' name='promocode' id='input-promocode' placeholder='Código Promocional'>
-			<input class='form__submit' type='submit' id='form-submit' value='Enviar'>
+			<button class='g-recaptcha form__submit' id='form-submit' data-sitekey="6LeQE1IUAAAAAF6c3YmLcApvymYDUUyJtXBhUd4_" data-callback='sendForm'>Enviar</button>
 		</form>
-		<div class="contact__hint text --body --center" id='form-hint'><strong></strong></div>
+		<div class="contact__hint text --body --center" id='form-hint'>&nbsp;</div>
+		<p class="captcha-notice">Esta página é protegida pelo reCAPTCHA e está sujeita à <a href="https://www.google.com/policies/privacy/">Política de privacidade</a> e aos <a href="https://www.google.com/policies/terms/">Termos de serviço</a> do Google.</p>		
 	</div>
 </section>
+

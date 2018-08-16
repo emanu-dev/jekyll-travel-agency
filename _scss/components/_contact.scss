@@ -43,6 +43,25 @@
 			left: 10%;
 			pointer-events: none;
 		}
+
+		.grecaptcha-badge {
+			display: none;
+		}
+
+        .captcha-notice {
+            color: $main-brand;
+            font-family: 'Lato-Thin', sans-serif;
+            font-size: .8rem;
+            line-height: 1rem;
+            margin-top: 1rem;
+
+            > a {
+            	color: inherit;
+                font: inherit;
+                font-family: 'Lato-Bold';
+                text-decoration: none;
+            }
+        }		
 	}
 	.contact__image {
 		background-image: url('../../images/contact.jpg');

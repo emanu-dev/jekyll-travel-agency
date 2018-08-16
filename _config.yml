@@ -2,7 +2,6 @@ name: Estanplaza Eventos
 
 include: 
   - fonts
-  - javascript
 
 exclude:
   - package.json

@@ -7,17 +7,17 @@ import slider from './modules/slider.module';
 import testimonials from './modules/testimonials.module';
 import scrollView from './modules/scroll.view.module';
 import navMenu from './modules/nav.menu.module';
-import form from './modules/form.module';
+import * as form from './modules/form.module';
 import placesGallery from './modules/places.gallery.module';
 import attrToBg from './modules/attrbg.module';
 
 /*=====  End of Imports  ======*/
 
+window.sendForm = form.default.validate;
 
 /*=================================
 =            Polyfills            =
 =================================*/
-
 // Overwrites native 'firstElementChild' prototype.
 // Adds Document & DocumentFragment support for IE9 & Safari.
 ;(function(constructor) {
@@ -39,12 +39,11 @@ import attrToBg from './modules/attrbg.module';
 })(window.Node || window.Element);
 
 /*=====  End of Polyfills  ======*/
-
 mobileMenu();
 slider();
 testimonials();
 navMenu();
-form();
+form.default.init();
 placesGallery();
 
 window.onload = () => {

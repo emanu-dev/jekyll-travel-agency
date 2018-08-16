@@ -546,6 +546,19 @@ body.--locked {
       top: 10%;
       left: 10%;
       pointer-events: none; }
+    .contact .contact__form .grecaptcha-badge {
+      display: none; }
+    .contact .contact__form .captcha-notice {
+      color: #03061b;
+      font-family: 'Lato-Thin', sans-serif;
+      font-size: .8rem;
+      line-height: 1rem;
+      margin-top: 1rem; }
+      .contact .contact__form .captcha-notice > a {
+        color: inherit;
+        font: inherit;
+        font-family: 'Lato-Bold';
+        text-decoration: none; }
   .contact .contact__image {
     background-image: url("../../images/contact.jpg");
     -webkit-background-size: cover;
@@ -620,6 +633,8 @@ body.--locked {
     position: absolute;
     pointer-events: none; }
   .form .form__submit {
+    grid-row: 6 / 6;
+    grid-column: 2 / 3;
     background-color: tranparent;
     border: 1px solid #03061b;
     color: #03061b;
