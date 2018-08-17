@@ -5,11 +5,6 @@ const init = () => {
 
 	document.documentElement.appendChild(captcha);
 	
-	// setTimeout( () => {
-	// 	document.querySelector('div.g-recaptcha').style.display = 'none';
-	// }, 1);
-	
-	
 	const fakeLabel = document.getElementById('fake-label');
 	const fakeLabelInput = document.getElementById('input-msg');
 
@@ -40,7 +35,6 @@ const validate = () => {
 		document.getElementById('form-hint').classList.add('--warning');
 	}else{
 		let captcha = grecaptcha.getResponse();
-		console.log(captcha);
 		formData['response'] = captcha;
 		send(formData, contactForm);
 	}	
