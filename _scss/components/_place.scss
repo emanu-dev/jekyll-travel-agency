@@ -1,9 +1,17 @@
 .place {
 	.place__main {
-		background-size: cover;
-		background-position: center;
+        background-color: #ececec;
+        background-image: url(../../images/loading.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 10rem 10rem;
 		height: 100vh;
 		
+        &[data-was-processed="true"] {
+            background-size: cover;
+            background-position: center;
+        }  
+
 		.place__header {
 			align-items: center;
 			background-color: rgba($main-brand, .9);
@@ -56,13 +64,13 @@
 			}
 
 			.place__gallery-item {
-				background-image: url(../../images/loading.svg);
 				background-size: cover;
 				background-position: center;
 			    display: inline-block;
 			    margin: 0 0 1rem;
-			    transition: transform 300ms ease;
 			    min-height: 8rem;
+			    position: relative;
+			    transition: transform 300ms ease;
 			    width: 100%;
 
 			    &:hover {
@@ -73,6 +81,10 @@
 			    >img {
 			    	height: auto;
 			    	width: 100%;
+	                background-image: url(../../images/loading.svg);
+	                background-repeat: no-repeat;
+	                background-position: center;
+	                background-size: 10rem 10rem;
 			    }
 			}
 
@@ -81,10 +93,18 @@
 	}
 
 	.place__bottom {
-		background-size: cover;
-		background-position: center;		
+        background-color: #ececec;
+        background-image: url(../../images/loading.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 10rem 10rem;	
 		height: 100vh;
 		position: relative;
+
+        &[data-was-processed="true"] {
+            background-size: cover;
+            background-position: center;
+        }
 
 		.place__footer {
 			align-items: center;

@@ -20,19 +20,18 @@
     <meta name="author" content="Entrecliques Digital Media Intelligence">
 	<title>Gran Estanplaza Berrini</title>
 	<link rel="stylesheet" href="/css/main.css">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <header class='header'>
 	<div class='header__contact'>
 		<p class='header__contact-text'>+55 11 3059 3277 - São Paulo Capital | 0800 726 1500 - Demais Localidades</p> 
 		<a href='http://instagram.com.br' target='_blank' alt='Acesse nosso instagram'>
-			<img class='header__contact-icon' src="/images/instagram-logo.svg" alt="">
+			<img class='header__contact-icon' src="/images/instagram-logo.svg" alt='Instagram'>
 		</a>
 	</div>
 	<div class='header__nav'>
 		<a href='http://estanplaza.com.br' target='_blank' alt='Estanplaza Hotels'>
-			<img src="/images/logo-neg.svg" alt="" class="header__logo">
+			<img src="/images/logo-neg.svg" alt='Estanplaza Hotels' class='header__logo'>
 		</a>
 		<div class="header__mobile --text">EVENTOS</div>
 		<button class="header__mobile --btn" id='mobile-menu-toggle'></button>
@@ -101,7 +100,7 @@
 	</div>
 </header>
 <div class="place" id='place-section'>
-	<div class="place__main attr-bg" id='place-main' data-bg='../../images/places/berrini.jpg'>
+	<div class="place__main lazy" id='place-main' data-src='../../images/places/berrini.jpg'>
 		<div class="place__header">
 			<h2 class="place__title">Gran Estanplaza Berrini</h2>
 			<div class="place__header-divider"></div>
@@ -118,34 +117,34 @@
 <p>Source <a href="https://en.wikipedia.org/wiki/Ginger_nut">Wikipedia</a></p>
 </p>
 	</div>
-	<div class='section__image attr-bg lazy' data-bg='../../images/places/berrini.jpg'></div>
+	<div class='section__image lazy' data-src='../../images/places/berrini.jpg'></div>
 </section>
 	<div class="place__gallery">
 		<div class="place__gallery-container" id='place-gallery'>
 			
 			<div class="place__gallery-item" data-media='http://via.placeholder.com/400x320'>
-				<img class='lazy' src='/images/loading.svg' data-src="http://via.placeholder.com/400x320" alt="">
+				<img class='lazy' data-src="http://via.placeholder.com/400x320" alt="">
 			</div>
 			
 			<div class="place__gallery-item" data-media='http://via.placeholder.com/640x480'>
-				<img class='lazy' src='/images/loading.svg' data-src="http://via.placeholder.com/640x480" alt="">
+				<img class='lazy' data-src="http://via.placeholder.com/640x480" alt="">
 			</div>
 			
 			<div class="place__gallery-item" data-media='http://via.placeholder.com/720x480'>
-				<img class='lazy' src='/images/loading.svg' data-src="http://via.placeholder.com/720x480" alt="">
+				<img class='lazy' data-src="http://via.placeholder.com/720x480" alt="">
 			</div>
 			
 			<div class="place__gallery-item" data-media='http://via.placeholder.com/400x320'>
-				<img class='lazy' src='/images/loading.svg' data-src="http://via.placeholder.com/400x320" alt="">
+				<img class='lazy' data-src="http://via.placeholder.com/400x320" alt="">
 			</div>
 			
 			<div class="place__gallery-item" data-media='http://via.placeholder.com/640x480'>
-				<img class='lazy' src='/images/loading.svg' data-src="http://via.placeholder.com/640x480" alt="">
+				<img class='lazy' data-src="http://via.placeholder.com/640x480" alt="">
 			</div>
 			
 		</div>
 	</div>
-	<div class="place__bottom attr-bg" data-bg='../../images/places/berrini.jpg'>
+	<div class="place__bottom lazy" data-src='../../images/places/berrini.jpg'>
 		<div class="place__footer">
 			<h2 class="place__title">Gran Estanplaza Berrini</h2>
 			<div class="place__header-divider"></div>
@@ -155,7 +154,7 @@
 </div>
 
 <section class='contact' id='contact'>
-	<div class='contact__image lazy'></div>
+	<div class='contact__image lazy' data-src="/images/contact.jpg"></div>
 	<div class='contact__form'>
 		<h2 class='text --title --center'>agende seu evento</h2>
 		<div class='contact__form-divider'></div>
@@ -181,10 +180,11 @@
 
 <footer class='footer'>
 	<a href='http://estanplaza.com.br' target='_blank' alt='Estanplaza Hotels'>
-		<img class='footer__logo' src='/images/logo-neg.svg' alt="">
+		<img class='footer__logo' src='/images/logo-neg.svg' alt='Estanplaza Hotels'>
 	</a>
 </footer>
 </body>
 <script src="/javascript/lib.min.js"></script>
 <script src="/javascript/app.js"></script>
+<!-- <script async defer src='https://www.google.com/recaptcha/api.js'></script> -->
 </html>

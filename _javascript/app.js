@@ -43,10 +43,15 @@ mobileMenu();
 slider();
 testimonials();
 navMenu();
-form.default.init();
 placesGallery();
 
+const section = window.location.hash.substring(2);
+if (document.getElementById(section)) {
+	document.getElementById(section).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 window.onload = () => {
+	form.default.init();
 
 	const bgElements = [].slice.call(document.querySelectorAll('.attr-bg'));
 
@@ -54,16 +59,10 @@ window.onload = () => {
 		bgElements.forEach((element) => {
 			attrToBg(element);
 		});
-	}	
+	}
 	
 	const myLazyLoad = new LazyLoad({
 		elements_selector: ".lazy",
 	    load_delay: 250
 	});
-
-	const section = window.location.hash.substring(2);
-
-	if (document.getElementById(section)) {
-		document.getElementById(section).scrollIntoView({ behavior: 'smooth', block: 'start' });
-	}
 };

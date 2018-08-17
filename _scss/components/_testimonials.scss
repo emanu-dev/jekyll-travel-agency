@@ -1,14 +1,21 @@
 .testimonials {
 	align-items: center;
-	background-image: url('../../images/testimonial.jpg');
-	background-size: cover;
-	background-position: center;
+    background-color: #ececec;
+    background-image: url(../../images/loading.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10rem 10rem;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 	justify-content: center;
 	overflow: hidden;
 	position: relative;
+
+    &[data-was-processed="true"] {
+        background-size: cover;
+        background-position: center;
+    }
 
 	&:after {
 		background-color: rgba(#fff, .6);

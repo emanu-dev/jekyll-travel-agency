@@ -45,7 +45,8 @@
 		}
 
 		.grecaptcha-badge {
-			display: none;
+			visibility: hidden;
+			pointer-events: none;
 		}
 
         .captcha-notice {
@@ -64,11 +65,18 @@
         }		
 	}
 	.contact__image {
-		background-image: url('../../images/contact.jpg');
-		background-size: cover;
-		background-position: center;
+        background-color: #ececec;
+        background-image: url(../../images/loading.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 10rem 10rem;
 		height: 100%;
 		width: 100%;
+
+        &[data-was-processed="true"] {
+            background-size: cover;
+            background-position: center;
+        } 
 
 		@media (max-width: 600px) {
 			height: 50vh;

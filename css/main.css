@@ -126,11 +126,21 @@ body.--locked {
     -o-transition: left 300ms ease;
     transition: left 300ms ease; }
     .slider .slider__list .slider__list-item .slider__list-img {
-      -webkit-background-size: cover;
-              background-size: cover;
+      background-color: #ececec;
+      background-image: url(../../images/loading.svg);
+      background-repeat: no-repeat;
       background-position: center;
+      -webkit-background-size: 10rem 10rem;
+              background-size: 10rem 10rem;
       height: 100vh;
+      -webkit-transition: background-image 300ms ease;
+      -o-transition: background-image 300ms ease;
+      transition: background-image 300ms ease;
       width: 100vw; }
+      .slider .slider__list .slider__list-item .slider__list-img[data-was-processed="true"] {
+        -webkit-background-size: cover;
+                background-size: cover;
+        background-position: center; }
   .slider .slider__nav {
     bottom: 1.5rem;
     display: -webkit-box;
@@ -226,11 +236,18 @@ body.--locked {
       left: 10%;
       pointer-events: none; }
   .section .section__image {
-    -webkit-background-size: cover;
-            background-size: cover;
+    background-color: #ececec;
+    background-image: url(../../images/loading.svg);
+    background-repeat: no-repeat;
     background-position: center;
+    -webkit-background-size: 10rem 10rem;
+            background-size: 10rem 10rem;
     height: 100%;
     width: 100%; }
+    .section .section__image[data-was-processed="true"] {
+      -webkit-background-size: cover;
+              background-size: cover;
+      background-position: center; }
     @media (max-width: 600px) {
       .section .section__image {
         height: 50vh; } }
@@ -342,10 +359,12 @@ body.--locked {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("../../images/testimonial.jpg");
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-color: #ececec;
+  background-image: url(../../images/loading.svg);
+  background-repeat: no-repeat;
   background-position: center;
+  -webkit-background-size: 10rem 10rem;
+          background-size: 10rem 10rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -362,6 +381,10 @@ body.--locked {
           justify-content: center;
   overflow: hidden;
   position: relative; }
+  .testimonials[data-was-processed="true"] {
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: center; }
   .testimonials:after {
     background-color: rgba(255, 255, 255, 0.6);
     content: "";
@@ -547,7 +570,8 @@ body.--locked {
       left: 10%;
       pointer-events: none; }
     .contact .contact__form .grecaptcha-badge {
-      display: none; }
+      visibility: hidden;
+      pointer-events: none; }
     .contact .contact__form .captcha-notice {
       color: #03061b;
       font-family: 'Lato-Thin', sans-serif;
@@ -560,12 +584,18 @@ body.--locked {
         font-family: 'Lato-Bold';
         text-decoration: none; }
   .contact .contact__image {
-    background-image: url("../../images/contact.jpg");
-    -webkit-background-size: cover;
-            background-size: cover;
+    background-color: #ececec;
+    background-image: url(../../images/loading.svg);
+    background-repeat: no-repeat;
     background-position: center;
+    -webkit-background-size: 10rem 10rem;
+            background-size: 10rem 10rem;
     height: 100%;
     width: 100%; }
+    .contact .contact__image[data-was-processed="true"] {
+      -webkit-background-size: cover;
+              background-size: cover;
+      background-position: center; }
     @media (max-width: 600px) {
       .contact .contact__image {
         height: 50vh; } }
@@ -642,12 +672,31 @@ body.--locked {
     .form .form__submit:hover {
       background-color: #ececec;
       cursor: pointer; }
+  .form.--sending:after {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url("../../images/loading.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 10rem 10rem;
+            background-size: 10rem 10rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9; }
 
 .place .place__main {
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-color: #ececec;
+  background-image: url(../../images/loading.svg);
+  background-repeat: no-repeat;
   background-position: center;
+  -webkit-background-size: 10rem 10rem;
+          background-size: 10rem 10rem;
   height: 100vh; }
+  .place .place__main[data-was-processed="true"] {
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: center; }
   .place .place__main .place__header {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -711,18 +760,18 @@ body.--locked {
            -moz-column-count: 2;
                 column-count: 2; } }
     .place .place__gallery .place__gallery-container .place__gallery-item {
-      background-image: url(../../images/loading.svg);
       -webkit-background-size: cover;
               background-size: cover;
       background-position: center;
       display: inline-block;
       margin: 0 0 1rem;
+      min-height: 8rem;
+      position: relative;
       -webkit-transition: -webkit-transform 300ms ease;
       transition: -webkit-transform 300ms ease;
       -o-transition: transform 300ms ease;
       transition: transform 300ms ease;
       transition: transform 300ms ease, -webkit-transform 300ms ease;
-      min-height: 8rem;
       width: 100%; }
       .place .place__gallery .place__gallery-container .place__gallery-item:hover {
         cursor: pointer;
@@ -731,14 +780,26 @@ body.--locked {
                 transform: scale(1.025); }
       .place .place__gallery .place__gallery-container .place__gallery-item > img {
         height: auto;
-        width: 100%; }
+        width: 100%;
+        background-image: url(../../images/loading.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-size: 10rem 10rem;
+                background-size: 10rem 10rem; }
 
 .place .place__bottom {
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-color: #ececec;
+  background-image: url(../../images/loading.svg);
+  background-repeat: no-repeat;
   background-position: center;
+  -webkit-background-size: 10rem 10rem;
+          background-size: 10rem 10rem;
   height: 100vh;
   position: relative; }
+  .place .place__bottom[data-was-processed="true"] {
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: center; }
   .place .place__bottom .place__footer {
     -webkit-box-align: center;
     -webkit-align-items: center;

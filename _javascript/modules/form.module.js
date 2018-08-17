@@ -1,5 +1,15 @@
 const init = () => {
 	VMasker(document.getElementById('input-phone')).maskPattern('(99) 999999999');
+	const captcha = document.createElement('script');
+	captcha.setAttribute('src', 'https://www.google.com/recaptcha/api.js');
+
+	document.documentElement.appendChild(captcha);
+	
+	// setTimeout( () => {
+	// 	document.querySelector('div.g-recaptcha').style.display = 'none';
+	// }, 1);
+	
+	
 	const fakeLabel = document.getElementById('fake-label');
 	const fakeLabelInput = document.getElementById('input-msg');
 
@@ -17,7 +27,6 @@ const init = () => {
 };
 
 const validate = () => {
-	const captcha = grecaptcha.getResponse();
 	const contactForm = document.getElementById('contact-form');
 
 	cleanHighlightInput('contact-form');
@@ -27,12 +36,13 @@ const validate = () => {
 
 	document.getElementById('form-hint').textContent = verifyResponse.message;
 	
-
 	if (verifyResponse.valid == false) {
 		document.getElementById('form-hint').classList.add('--warning');
 	}else{
+		let captcha = grecaptcha.getResponse();
+		console.log(captcha);
 		formData['response'] = captcha;
-		send(formData);
+		send(formData, contactForm);
 	}	
 };
 
@@ -153,20 +163,24 @@ function cleanHighlightInput(formid) {
 	});
 }
 
-const send = (data) => {
+const send = (data, contactForm) => {
+
+	contactForm.classList.add('--sending');
 
     // axios.post('http://localhost:8081/estevents?response=' + data['g-recaptcha-response'], data)
     axios.post('https://hidden-island-58583.herokuapp.com/estevents?response=' + data['g-recaptcha-response'], data)
-        .then(function(response) {
+        .then((response) => {
             if (response.data.responseCode != 2) {
-                grecaptcha.reset();
                 document.getElementById('form-hint').textContent = response.data.responseDesc;
             }
         })
-        .catch(function(error) {
+        .catch((error) => {
 			cleanHighlightInput('contact-form');
 			document.getElementById('form-hint').textContent = 'Serviço indisponível no momento, por favor tente mais tarde';
-            grecaptcha.reset();
+        })
+        .then(()=>{
+			contactForm.classList.remove('--sending');
+			grecaptcha.reset();
         });
 
 };

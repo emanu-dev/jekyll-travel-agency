@@ -13,11 +13,21 @@
         transition: left 300ms ease;
 
         .slider__list-item {
+
             .slider__list-img {
-                background-size: cover;
+                background-color: #ececec;
+                background-image: url(../../images/loading.svg);
+                background-repeat: no-repeat;
                 background-position: center;
+                background-size: 10rem 10rem;
 	            height: 100vh;
+                transition: background-image 300ms ease;
 	            width: 100vw;
+
+                &[data-was-processed="true"] {
+                    background-size: cover;
+                    background-position: center;
+                }                
             }
         }
     }

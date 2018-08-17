@@ -20,19 +20,18 @@
     <meta name="author" content="Entrecliques Digital Media Intelligence">
 	<title>Estanplaza Eventos Sociais</title>
 	<link rel="stylesheet" href="/css/main.css">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <header class='header'>
 	<div class='header__contact'>
 		<p class='header__contact-text'>+55 11 3059 3277 - São Paulo Capital | 0800 726 1500 - Demais Localidades</p> 
 		<a href='http://instagram.com.br' target='_blank' alt='Acesse nosso instagram'>
-			<img class='header__contact-icon' src="/images/instagram-logo.svg" alt="">
+			<img class='header__contact-icon' src="/images/instagram-logo.svg" alt='Instagram'>
 		</a>
 	</div>
 	<div class='header__nav'>
 		<a href='http://estanplaza.com.br' target='_blank' alt='Estanplaza Hotels'>
-			<img src="/images/logo-neg.svg" alt="" class="header__logo">
+			<img src="/images/logo-neg.svg" alt='Estanplaza Hotels' class='header__logo'>
 		</a>
 		<div class="header__mobile --text">EVENTOS</div>
 		<button class="header__mobile --btn" id='mobile-menu-toggle'></button>
@@ -132,7 +131,7 @@
 		<div class="section__content-divider"></div>
 		<p class='text --body --center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi..</p>
 	</div>
-	<div class='section__image attr-bg lazy' data-bg='../../images/eventos_enc.jpg'></div>
+	<div class='section__image lazy' data-src='../../images/eventos_enc.jpg'></div>
 </section>
 <section class='places-menu' id='places-menu'>
 
@@ -179,14 +178,14 @@
 	
 </section>
 <section class='section' id='gastronomy'>
-	<div class="section__image attr-bg lazy" data-bg='../../images/food.jpg'></div>
+	<div class="section__image lazy" data-src='../../images/food.jpg'></div>
 	<div class="section__content">
 		<h2 class='text --title --center'>gastronomia</h2>
 		<div class="section__content-divider"></div>
 		<p class='text --body --center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi..</p>
 	</div>	
 </section>
-<section class='testimonials lazy' id='testimonials'>
+<section class='testimonials lazy' data-src="/images/testimonial.jpg" id='testimonials'>
 		<ul class='testimonials__list' id='testimonial-list'>
 			<li class="testimonials__item">
 				<p class='testimonials__item-text'>"Lorem ipsum dolor sit amet!1"</p>
@@ -215,7 +214,7 @@
 		</div>
 </section>
 <section class='contact' id='contact'>
-	<div class='contact__image lazy'></div>
+	<div class='contact__image lazy' data-src="/images/contact.jpg"></div>
 	<div class='contact__form'>
 		<h2 class='text --title --center'>agende seu evento</h2>
 		<div class='contact__form-divider'></div>
@@ -241,10 +240,11 @@
 
 <footer class='footer'>
 	<a href='http://estanplaza.com.br' target='_blank' alt='Estanplaza Hotels'>
-		<img class='footer__logo' src='/images/logo-neg.svg' alt="">
+		<img class='footer__logo' src='/images/logo-neg.svg' alt='Estanplaza Hotels'>
 	</a>
 </footer>
 </body>
 <script src="/javascript/lib.min.js"></script>
 <script src="/javascript/app.js"></script>
+<!-- <script async defer src='https://www.google.com/recaptcha/api.js'></script> -->
 </html>
