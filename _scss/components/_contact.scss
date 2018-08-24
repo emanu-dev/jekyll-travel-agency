@@ -1,8 +1,7 @@
 .contact{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	height: auto;
-	height: 100vh;
+	min-height: 100vh;
 
 	@media (max-width: 600px) {
 		height: auto;
