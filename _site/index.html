@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+<main id='main'>
 <header class='header'>
 	<div class='header__contact'>
 		<p class='header__contact-text'>+55 11 3059 3277 - São Paulo Capital | 0800 726 1500 - Demais Localidades</p> 
@@ -99,7 +100,7 @@
 	<div class="header__overlay"></div>
 	</div>
 </header>
-<div class="slider" id='home'>
+<div class="sec slider" id='home'>
 	<ul class="slider__list">
 		
 			<li class="slider__list-item">
@@ -125,15 +126,15 @@
 	</ul>
 	<div class='slider__nav' id='slider-nav'></div>
 </div>
-<section class='section' id='about'>
+<section class='sec section' id='about'>
 	<div class='section__content'>
 		<h2 class='text --title --center'>traga seu evento ao <strong> grupo estanplaza</strong></h2>
 		<div class="section__content-divider"></div>
-		<p class='text --body --center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi..</p>
+		<p class='text --body --center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ration possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi..</p>
 	</div>
 	<div class='section__image lazy' data-src='../../images/eventos_enc.jpg'></div>
 </section>
-<section class='places-menu' id='places-menu'>
+<section class='sec places-menu' id='places-menu'>
 
 
   
@@ -177,7 +178,7 @@
   
 	
 </section>
-<section class='section' id='gastronomy'>
+<section class='sec section' id='gastronomy'>
 	<div class="section__image lazy" data-src='../../images/food.jpg'></div>
 	<div class="section__content">
 		<h2 class='text --title --center'>gastronomia</h2>
@@ -185,7 +186,7 @@
 		<p class='text --body --center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto minima sunt eveniet ducimus ratione possimus consequatur quo, dolore nulla, praesentium vero recusandae quis laborum ipsa voluptatem. Suscipit, distinctio, commodi..</p>
 	</div>	
 </section>
-<section class='testimonials lazy' data-src="/images/testimonial.jpg" id='testimonials'>
+<section class='sec testimonials lazy' data-src="/images/testimonial.jpg" id='testimonials'>
 		<ul class='testimonials__list' id='testimonial-list'>
 			<li class="testimonials__item">
 				<p class='testimonials__item-text'>"Lorem ipsum dolor sit amet!1"</p>
@@ -213,7 +214,7 @@
 			<div class="testimonials__nav-item --right">></div>
 		</div>
 </section>
-<section class='contact' id='contact'>
+<section class='sec contact' id='contact'>
 	<div class='contact__image lazy' data-src="/images/contact.jpg"></div>
 	<div class='contact__form'>
 		<h2 class='text --title --center'>agende seu evento</h2>
@@ -238,11 +239,12 @@
 </section>
 
 
-<footer class='footer'>
+<footer class='sec footer' id='footer'>
 	<a href='http://estanplaza.com.br' target='_blank' alt='Estanplaza Hotels'>
 		<img class='footer__logo' src='/images/logo-neg.svg' alt='Estanplaza Hotels'>
 	</a>
 </footer>
+</main>
 </body>
 <script src="/javascript/lib.min.js"></script>
 <script src="/javascript/app.js"></script>

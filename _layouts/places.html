@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-<div class="place" id='place-section'>
+<div class="sec place" id='place-section'>
 	<div class="place__main lazy" id='place-main' data-src='{{ page.image_path }}'>
 		<div class="place__header">
 			<h2 class="place__title">{{ page.title }}</h2>
@@ -13,7 +13,7 @@ layout: page
 		content=page.content
 		bg=page.image_path
 	%}
-	<div class="place__gallery">
+	<div class="sec place__gallery">
 		<div class="place__gallery-container" id='place-gallery'>
 			{% for item in page.gallery %}
 			<div class="place__gallery-item" data-media='{{item.media_url}}'>
@@ -22,7 +22,7 @@ layout: page
 			{% endfor %}
 		</div>
 	</div>
-	<div class="place__bottom lazy" data-src='{{ page.image_path }}'>
+	<div class="sec place__bottom lazy" data-src='{{ page.image_path }}'>
 		<div class="place__footer">
 			<h2 class="place__title">{{ page.title }}</h2>
 			<div class="place__header-divider"></div>

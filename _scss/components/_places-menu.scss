@@ -2,7 +2,8 @@
 	background: $main-brand;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 15rem 15rem 10rem;
+	grid-template-rows: 15fr 15fr 10fr;
+	height: 100vh;
 
 	@media (max-width: 600px) {
 		display: flex;

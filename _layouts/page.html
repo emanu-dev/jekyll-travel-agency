@@ -22,10 +22,12 @@
 	<link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
 </head>
 <body>
+<main id='main'>
 {% include header.html %}
 {{ content }}
 {% include contact.html title="agende seu evento" %}
 {% include footer.html %}
+</main>
 </body>
 <script src="{{ "/javascript/lib.min.js" | relative_url }}"></script>
 <script src="{{ "/javascript/app.js" | relative_url }}"></script>

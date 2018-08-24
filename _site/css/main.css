@@ -171,8 +171,7 @@ body.--locked {
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: auto;
-  min-height: 40rem; }
+  height: 100vh; }
   @media (max-width: 600px) {
     .section {
       height: auto;
@@ -256,7 +255,8 @@ body.--locked {
   background: #03061b;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 15rem 15rem 10rem; }
+  grid-template-rows: 15fr 15fr 10fr;
+  height: 100vh; }
   @media (max-width: 600px) {
     .places-menu {
       display: -webkit-box;
