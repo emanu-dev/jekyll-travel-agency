@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "jekyll:build": "jekyll build",
-    "parcel:build": "parcel build _javascript/app.js --out-dir _site/javascript",
+    "parcel:watch": "parcel watch _javascript/app.js --out-dir _site/javascript",
     "all:build": "jekyll build | parcel build _javascript/app.js --out-dir _site/javascript"
   },
   "author": "Emanuel Prado",
@@ -25,7 +25,9 @@
     "gulp-file-include": "^2.0.1",
     "gulp-image": "^4.3.0",
     "gulp-notify": "^3.2.0",
+    "gulp-parcel": "^0.3.5",
     "gulp-sass": "^4.0.1",
+    "gulp-sequence": "^1.0.0",
     "gulp-sourcemaps": "^2.6.4"
   },
   "dependencies": {

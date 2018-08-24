@@ -7,7 +7,9 @@ const concat = require('gulp-concat');
 const cp = require('child_process');
 const image = require('gulp-image');
 const notify = require('gulp-notify');
+const parcel = require ('gulp-parcel');
 const prefix = require('gulp-autoprefixer');
+const gulpSequence = require('gulp-sequence');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 
@@ -45,6 +47,17 @@ gulp.task('libjs', () => {
 });
 
 
+gulp.task('jekyll:build', (done) => {
+    browserSync.notify(messages.jekyllBuild);
+    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
+
+gulp.task( 'parcel:build', () => {
+    gulp.src('./_javascript/app.js', {read:false})
+        .pipe(parcel({outDir: './_site/javascript/'}));
+});
+
 gulp.task('images', () => {
     return gulp.src('images/**')
         .pipe(image({
@@ -60,24 +73,6 @@ gulp.task('images', () => {
             quiet: false
         }))
         .pipe(gulp.dest('images/'));
-});
-
-gulp.task('jekyll-build', ['images'], (done) => {
-    browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
-        .on('close', done);
-});
-
-gulp.task('jekyll-rebuild', ['jekyll-build', 'images'], () => {
-    browserSync.reload();
-});
-
-gulp.task('browser-sync', ['sass'], () => {
-    browserSync({
-        server: {
-            baseDir: '_site'
-        }
-    });
 });
 
 gulp.task('sass', () => {
@@ -101,10 +96,31 @@ gulp.task('sass', () => {
         .pipe(gulp.dest('css'));
 });
 
+gulp.task('browser:reload', () => {
+    browserSync.reload();
+});
+
+gulp.task('site:rebuild', (callback) => {
+    gulpSequence('jekyll:build', 'parcel:build', 'browser:reload')(callback);   
+});
+
+gulp.task('site:build', (callback) => {
+    gulpSequence('jekyll:build', 'parcel:build', 'images', 'sass')(callback);   
+});
+
+gulp.task('browser:sync', ['sass'], () => {
+    browserSync({
+        server: {
+            baseDir: '_site'
+        }
+    });
+});
 
 gulp.task('watch', () => {
     gulp.watch(['_scss/*.scss', '_scss/**/*.scss'], ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*', '_javascript/**/*.js'], ['site:rebuild']);
 });
 
-gulp.task('default', ['images', 'browser-sync', 'watch']);
+gulp.task('default', (callback) => {
+    gulpSequence('jekyll:build', 'parcel:build', 'images', 'browser:sync', 'watch')(callback);
+});
