@@ -10,6 +10,8 @@ const navMenu = () => {
 	const max = (sectionList.length - 1);
 	let canScroll = true;	
 
+	let startY = 0;
+
 	if (window.location.pathname.split( '/' ).length < 3) {
 
 		menuItems.forEach((item, index) => {
@@ -27,8 +29,6 @@ const navMenu = () => {
 	window.addEventListener('wheel', (e) => {
 	    e.preventDefault();
 	
-	    console.log(canScroll);
-
 	    if (canScroll) {
 	    	canScroll = false;
 		    if (e.deltaY < 0) {
@@ -41,39 +41,49 @@ const navMenu = () => {
 
 		    setTimeout(()=>{
 		    	canScroll = true;
-		    	console.log(canScroll);
 		    }, 800);
 
-		    console.log(sectionList[currentSection].getAttribute('id'));
 		    window.location.hash = `/${sectionList[currentSection].getAttribute('id')}`;
 		    document.getElementById(sectionList[currentSection].getAttribute('id')).scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-
-
 	    }
 
 
 	});
 
 
-	window.addEventListener('touchmove', (e) => {
-	    e.preventDefault();
-	    var currentY = e.originalEvent.touches[0].clientY;
-	    if(currentY > lastY){
-	        console.log('scrolling up');
-	        console.log('Samuel L. Jackson says: Go down MOTHERFUCKER');
-	        currentSection = Math.max(min, Math.min(currentSection - 1, max));
-	    }else if(currentY < lastY){
-	        console.log('scrolling down');
-	        console.log('Samuel L. Jackson says: Go up MOTHERFUCKER');
-	        currentSection = Math.max(min, Math.min(currentSection + 1, max));
-	    }
-	    lastY = currentY;
+	// window.addEventListener('touchstart', (e) => {
+	// 	startY = e.touches[0].clientY;
+	// });
 
-	    console.log(currentSection);
-	    window.location.hash = `/${sectionList[currentSection].getAttribute('id')}`;
-	    document.getElementById(sectionList[currentSection].getAttribute('id')).scrollIntoView({ behavior: 'smooth', block: 'start' });
-	});
+	// window.addEventListener('touchmove', (e) => {
+	//     if (canScroll) {
+	//     	canScroll = false;
+	// 	    let currentY = e.touches[0].clientY;
+
+	// 	    if (currentY > startY){
+	// 	        currentSection = Math.max(min, Math.min(currentSection - 1, max));
+	// 	    }else if(currentY < startY){
+	// 	        currentSection = Math.max(min, Math.min(currentSection + 1, max));
+	// 	    }
+
+	// 	    console.log(Math.sign(currentY - startY));
+		    
+	// 	    setTimeout(()=>{
+	// 	    	canScroll = true;
+	// 	    	console.log(canScroll);
+	// 	    }, 800);		    
+
+	// 	    let targetElement = document.getElementById(sectionList[currentSection].getAttribute('id') + '-mobile');
+	// 	    if (targetElement == null)  {
+	// 	    	targetElement = document.getElementById(sectionList[currentSection].getAttribute('id'));
+	// 	    }
+
+	// 		console.log(currentSection, targetElement, (targetElement==null));
+	// 		window.location.hash = `/${targetElement.getAttribute('id')}`;
+	// 		targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	//     }	    
+	// });
 
 
 };

@@ -1,4 +1,5 @@
 <section class='sec places-menu' id='places-menu'>
+	<span class='mobile-offset' id='places-menu-mobile'></span>
 {% for item in site.places %}
 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
   {% if thecycle == 'odd' %}

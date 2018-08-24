@@ -2,12 +2,13 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	height: auto;
-	min-height: 40rem;
+	height: 100vh;
 
 	@media (max-width: 600px) {
 		height: auto;
 		grid-template-columns: 100vw;
 		grid-template-rows: 1fr;
+		position: relative;
 	}
 
 	.contact__form {

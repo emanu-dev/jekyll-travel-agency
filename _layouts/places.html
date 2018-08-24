@@ -12,9 +12,11 @@ layout: page
 		title="características <strong>gerais</strong>" 
 		content=page.content
 		bg=page.image_path
+		section="desc"
 	%}
-	<div class="sec place__gallery">
+	<div class="sec place__gallery" id='gallery-section'>
 		<div class="place__gallery-container" id='place-gallery'>
+			<span class='mobile-offset' id='place-gallery-mobile'></span>
 			{% for item in page.gallery %}
 			<div class="place__gallery-item" data-media='{{item.media_url}}'>
 				<img class='lazy' data-src="{{item.thumb}}" alt="">
@@ -22,7 +24,7 @@ layout: page
 			{% endfor %}
 		</div>
 	</div>
-	<div class="sec place__bottom lazy" data-src='{{ page.image_path }}'>
+	<div class="sec place__bottom lazy" id='bottom-section' data-src='{{ page.image_path }}'>
 		<div class="place__footer">
 			<h2 class="place__title">{{ page.title }}</h2>
 			<div class="place__header-divider"></div>

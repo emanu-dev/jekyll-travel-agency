@@ -115,6 +115,9 @@ window.onload = () => {
     if (!mobilecheck()){
         document.documentElement.style.overflow = 'hidden';  // firefox, chrome
         document.body.scroll = "no"; // ie only        
+    }else {
+        window.scrollTo(0,1);
+        // document.body.style.touchAction = 'none';        
     }
 
 
@@ -132,4 +135,5 @@ window.onload = () => {
 		elements_selector: ".lazy",
 	    load_delay: 250
 	});
+
 };

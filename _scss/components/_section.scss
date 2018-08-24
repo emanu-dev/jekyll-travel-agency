@@ -4,10 +4,19 @@
 	height: 100vh;
 
 	@media (max-width: 600px) {
-		height: auto;
+		// height: calc(100vh - 8rem);
 		grid-template-columns: 100vw;
 		grid-template-rows: 1fr;
+		position: relative;
+	
+		.mobile-offset {
+			position: absolute;
+			top: -8rem;
+		}
+
 	}
+
+
 
 	.section__content {
 		align-items: center;
@@ -69,6 +78,7 @@
 			pointer-events: none;
 		}
 	}
+	
 	.section__image {
         background-color: #ececec;
         background-image: url(../../images/loading.svg);
@@ -84,7 +94,7 @@
         }  
 
 		@media (max-width: 600px) {
-			height: 50vh;
+			height: 100%;
 		}
 	}
 }

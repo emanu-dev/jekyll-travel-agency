@@ -1,0 +1,10 @@
+.mobile-offset {
+	display: none;
+
+	@media (max-width: 600px) {
+		display: initial;
+		position: absolute;
+		top: -8rem;
+	}	
+}
+

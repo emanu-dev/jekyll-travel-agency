@@ -4,6 +4,10 @@
     position: relative;
     width: 100%;
 
+    @media (max-width: 600px) {
+        // height: calc(100vh - 6rem);
+    }
+
     .slider__list {
         display: flex;
         flex-direction: row;

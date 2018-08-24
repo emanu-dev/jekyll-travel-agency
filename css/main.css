@@ -69,6 +69,14 @@ table {
 body.--locked {
   overflow: hidden; }
 
+.mobile-offset {
+  display: none; }
+  @media (max-width: 600px) {
+    .mobile-offset {
+      display: initial;
+      position: absolute;
+      top: -8rem; } }
+
 .text.--title {
   color: #03061b;
   font-family: 'Lato-Thin';
@@ -174,9 +182,12 @@ body.--locked {
   height: 100vh; }
   @media (max-width: 600px) {
     .section {
-      height: auto;
       grid-template-columns: 100vw;
-      grid-template-rows: 1fr; } }
+      grid-template-rows: 1fr;
+      position: relative; }
+      .section .mobile-offset {
+        position: absolute;
+        top: -8rem; } }
   .section .section__content {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -249,7 +260,7 @@ body.--locked {
       background-position: center; }
     @media (max-width: 600px) {
       .section .section__image {
-        height: 50vh; } }
+        height: 100%; } }
 
 .places-menu {
   background: #03061b;
@@ -267,7 +278,10 @@ body.--locked {
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
-              flex-direction: column; } }
+              flex-direction: column;
+      min-height: -webkit-calc(10rem);
+      min-height: calc(10rem);
+      position: relative; } }
   .places-menu .places-menu__item {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -393,6 +407,9 @@ body.--locked {
     top: calc(50% - 10rem);
     position: absolute;
     width: 100%; }
+  @media (max-width: 600px) {
+    .testimonials {
+      position: relative; } }
   .testimonials .testimonials__list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -524,12 +541,13 @@ body.--locked {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: auto;
-  min-height: 40rem; }
+  height: 100vh; }
   @media (max-width: 600px) {
     .contact {
       height: auto;
       grid-template-columns: 100vw;
-      grid-template-rows: 1fr; } }
+      grid-template-rows: 1fr;
+      position: relative; } }
   .contact .contact__form {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -1112,6 +1130,9 @@ body.--locked {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 2rem; }
+  @media (max-width: 600px) {
+    .footer {
+      position: relative; } }
   .footer .footer__logo {
     height: 6rem;
     width: auto; }
