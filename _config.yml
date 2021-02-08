@@ -1,5 +1,8 @@
 name: Estanplaza Eventos
 
+source              : ./src
+destination         : ./_site
+
 include: 
   - fonts
 
@@ -11,6 +14,10 @@ exclude:
   - gulpfile.js
   - node_modules
 
+
+sass:
+  sass_dir: /_scss
+  style: compressed
 
 collections:
   places:
@@ -25,26 +32,26 @@ slides:
   - img_url: images/slide5.jpg
 
 menu-items:
-- name: eventos
+- name: home
   id: home
-- name: grupo estanplaza
+- name: about us
   id: about
-- name: espaços
+- name: places
   id: places-menu 
   subitems:
-    - name: funchal
-      url: /places/funchal
-    - name: internacional
-      url: /places/internacional
-    - name: berrini
-      url: /places/berrini
-    - name: estanconfor veranda berrini
-      url: /places/veranda-berrini
-    - name: bar mirante
-      url: /places/mirante
-- name: gastronomia
-  id: gastronomy
-- name: depoimentos
+    - name: forests
+      url: /places/forest
+    - name: jungles
+      url: /places/jungle
+    - name: mountains
+      url: /places/mountain
+    - name: tropical forests
+      url: /places/tropical-forest
+    - name: valleys
+      url: /places/valley
+- name: benefits
+  id: benefits
+- name: testimonials
   id: testimonials
-- name: contato
+- name: contact
   id: contact

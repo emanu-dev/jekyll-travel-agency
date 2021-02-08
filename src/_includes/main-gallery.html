@@ -1,0 +1,11 @@
+<div class="sec slider" id='home'>
+	<ul class="slider__list">
+		{% for slide in site.slides %}
+			<li class="slider__list-item">
+				<div class="slider__list-img" style='background-image: url({{ slide.img_url }})'></div>
+			</li>		
+		{% endfor %}
+	</ul>
+	<div class='slider__nav' id='slider-nav'></div>
+	<span class='mobile-offset' id='home-mobile'></span>
+</div>

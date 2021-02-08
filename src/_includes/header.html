@@ -1,0 +1,34 @@
+<header class='header'>
+	<div class='header__contact'>
+		<p class='header__contact-text'>See more from us: </p> 
+		<a href='http://instagram.com.br' target='_blank' alt='Acesse nosso instagram'>
+			<img class='header__contact-icon' src="{{ "/images/instagram-logo.svg" | relative_url }}" alt='Instagram'>
+		</a>
+	</div>
+	<div class='header__nav'>
+		<a href='https://example.com' target='_blank' alt='Outdoor'>
+			<img src="{{ "/images/logo.svg" | relative_url }}" alt='Outdoor' class='header__logo'>
+		</a>
+		<div class="header__mobile --text">EVENTOS</div>
+		<button class="header__mobile --btn" id='mobile-menu-toggle'></button>
+		<ul class='header__menu' id='mobile-menu'>
+			{% for item in site.menu-items %}
+			    <li class='header__menu-item' data-section='{{ item.id }}'>
+			    	<a href="/#/{{ item.id }}">{{ item.name }}
+			    		{% if item.subitems %}
+			    			<span class='icon --no-mobile'>▼</span>
+						{% endif %}
+			    	</a>
+			    	{% if item.subitems %}
+				    	<ul class='header__submenu'>
+				    	{% for subitem in item.subitems %}
+				    		<li class='header__submenu-item'><a href="{{ subitem.url }}">{{subitem.name}}</a></li>
+				    	{% endfor %}
+				    	</ul>
+			    	{% endif %}
+			    </li>
+			{% endfor %}
+		</ul>
+	<div class="header__overlay"></div>
+	</div>
+</header>

@@ -1,0 +1,21 @@
+<section class='sec places-menu' id='places-menu'>
+	<span class='mobile-offset' id='places-menu-mobile'></span>
+{% for item in site.places %}
+{% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  {% if thecycle == 'odd' %}
+    {% if forloop.last %}
+		<a href="{{ item.url }}" class='places-menu__item --line' style='background-image: url({{item.image_path}})'>
+			<h3 class='text --title --center --neg'>{{item.title}}</h3>
+		</a>
+    {% else %}
+		<a href="{{ item.url }}" class='places-menu__item --left' style='background-image: url({{item.image_path}})'>
+			<h3 class='text --title --center --neg'>{{item.title}}</h3>
+		</a>
+    {% endif %}  
+  {%else%}
+	<a href="{{ item.url }}" class='places-menu__item --right' style='background-image: url({{item.image_path}})'>
+		<h3 class='text --title --center --neg'>{{item.title}}</h3>
+	</a>
+  {% endif %}
+{% endfor %}	
+</section>

@@ -1,0 +1,104 @@
+.form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-row-gap: 1rem;
+	grid-column-gap: 2rem;
+	height: auto;
+	padding: 10% 0;
+	position: relative;
+	width: 100%;
+
+	.form__input {
+		border: 0;
+		border-bottom: 1px solid $main-brand;
+		font-family: 'Lato-Thin';
+		font-size: .8rem;
+		height: auto;
+		line-height: 1rem;
+		outline: none;
+		padding: .25rem;
+		margin: 0;
+		transition: border-color 300ms ease;
+
+		&.--warning {
+			border-color: #ff2366;
+		}		
+
+		&.--select {
+			background: #fff;
+			border: 0;
+			border-bottom: 1px solid $main-brand;
+			border-radius: 0px;
+			padding: .25rem;
+			background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'%3E%3C/path%3E%3C/svg%3E");
+			background-position: calc(100% - 3px) 50%;
+			background-repeat: no-repeat;
+			background-size: 16px;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+
+			&.--warning {
+				border-color: #ff2366;
+			}	
+
+			&::-ms-expand {
+     			display: none;
+			}
+		}
+
+		&.--textarea {
+			height: auto;
+			position: relative;
+			overflow-y: visible;
+			resize: none;
+		}
+
+		&.--span-line {
+			grid-column: 1 / span 2;
+		}
+
+		&:focus {
+			background-color: #ececec;
+		}
+	}
+
+	.form__fakelabel {
+		color: #656565;
+		font-family: 'Lato-Thin';
+		font-size: .8rem;
+		grid-column: 1 / 1;
+		grid-row: 5 / 5;		
+		line-height: 1rem;
+		padding: .25rem;
+		position: absolute;
+		pointer-events: none;
+	}
+
+	.form__submit {
+		grid-row: 6 / 6;
+		grid-column: 2 / 3;
+		background-color: tranparent;
+		border: 1px solid $main-brand;
+		color: $main-brand;
+		font-size: .8rem;
+
+		&:hover {
+			background-color: $element-focus;
+			cursor: pointer;
+		}
+	}
+
+	&.--sending {
+		&:after {
+			content: "";
+			background-color: rgba(#ffffff, 0.8);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 9;
+		}
+	}
+}

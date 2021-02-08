@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <!-- og metas -->
+    <meta property="og:title" content="OUTDOOR">
+    <meta property="og:description" content="Trip Agency">
+    <meta property="og:type" content="website">
+    <meta property="og:image:alt" content="">
+    <meta property="og:image" content="">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="keywords" content="trip">
+    <meta http-equiv="cache-control" content="Public">
+    <meta http-equiv="pragma" content="Public">
+    <meta name="description" content="Trip Agency">
+    <meta name="author" content="Emanuel Prado">
+	<title>{{ page.title }}</title>
+	<link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
+</head>
+<body>
+<main id='main'>
+{% include header.html %}
+{{ content }}
+{% include contact.html title="get a quote" %}
+{% include footer.html %}
+</main>
+</body>
+<script src="{{ "/js/main.min.js" | relative_url }}"></script>
+<!-- <script async defer src='https://www.google.com/recaptcha/api.js'></script> -->
+</html>

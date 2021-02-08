@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["modules/test.module.js"],"sourcesContent":["\"use strict\";\n\ntest = function test(string) {\n\tconsole.log(string);\n};\n\nmodule.exports = test;"],"file":"test.module.js"}
