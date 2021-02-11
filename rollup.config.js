@@ -8,12 +8,11 @@ export default {
   output: {
     file: 'src/js/main.min.js',
     format: "umd",
-    sourceMap: true,
+    sourcemap: true,
   },
   plugins: [
     resolve({
-      jsnext: true,
-      main: true      
+      mainFields: ['jsnext:main']
     }),
     babel({
       comments: false,

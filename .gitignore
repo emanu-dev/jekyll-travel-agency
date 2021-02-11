@@ -3,5 +3,7 @@ node_modules/
 .cache
 vendor/
 _site/
-src/.jekyll-cache
+.sass-cache/
+src/.jekyll-cache/
+src/.jekyll-metadata/
 .idea/
