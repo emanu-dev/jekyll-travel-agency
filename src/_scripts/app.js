@@ -1,9 +1,26 @@
+/*======================================================
+=            Image imports for optimization            =
+======================================================*/
+
+import contact from "../_img/contact.jpg";
+import eventosEnc from '../_img/eventos_enc.jpg';
+import panel from '../_img/panel.jpg';
+import testimonial from '../_img/testimonial.jpg';
+import slide1 from '../_img/slide1.jpg';
+import slide2 from '../_img/slide2.jpg';
+import slide3 from '../_img/slide3.jpg';
+import slide4 from '../_img/slide4.jpg';
+import place1 from '../_img/places/place-1.jpg';
+import place2 from '../_img/places/place-2.jpg';
+import place3 from '../_img/places/place-3.jpg';
+import place4 from '../_img/places/place-4.jpg';
+
+
 /*===============================
 =            Imports            =
 ===============================*/
 
 import * as basicLightbox from 'basiclightbox';
-
 import mobileMenu from './_modules/mobile.menu.module';
 import slider from './_modules/slider.module';
 import testimonials from './_modules/testimonials.module';
@@ -11,8 +28,6 @@ import navMenu from './_modules/nav.menu.module';
 import * as form from './_modules/form.module';
 import placesGallery from './_modules/places.gallery.module';
 import attrToBg from './_modules/attrbg.module';
-
-
 
 /*=====  End of Imports  ======*/
 
