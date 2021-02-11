@@ -11,16 +11,17 @@ A website for a fictious travel agency. Built with Jekyll.
 
 1 - Be sure to have the latest Node, NPM and Ruby installed
 
-2 - Install [Jekyll](https://jekyllrb.com/docs/) 
+2 - Install [Jekyll + Bundler](https://jekyllrb.com/docs/) 
 
 3 - Clone this repository
 
 4 - Install dependencies
 ```sh
+$ bundle install
 $ npm install
 ```
 
-5 - Build the project
+5 - Build the project Javascript
 ```sh
 $ npm run build
 ```

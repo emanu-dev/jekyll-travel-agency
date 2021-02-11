@@ -34,7 +34,6 @@ const validate = () => {
 	if (verifyResponse.valid == false) {
 		document.getElementById('form-hint').classList.add('--warning');
 	}else{
-		let captcha = grecaptcha.getResponse();
 		formData['response'] = captcha;
 		send(formData, contactForm);
 	}	
@@ -153,7 +152,7 @@ function cleanHighlightInput(formid) {
 	const formInputs = [].slice.call(document.getElementById(formid).childNodes);
 
 	formInputs.forEach((element) => {
-		if (element.nodeName != '#text') element.classList.remove('--warning');
+		if (element.nodeName !== '#text') element.classList.remove('--warning');
 	});
 }
 
@@ -161,21 +160,9 @@ const send = (data, contactForm) => {
 
 	contactForm.classList.add('--sending');
 
-    // axios.post('http://localhost:8081/estevents?response=' + data['g-recaptcha-response'], data)
-    axios.post('https://hidden-island-58583.herokuapp.com/estevents?response=' + data['g-recaptcha-response'], data)
-        .then((response) => {
-            if (response.data.responseCode != 2) {
-                document.getElementById('form-hint').textContent = response.data.responseDesc;
-            }
-        })
-        .catch((error) => {
-			cleanHighlightInput('contact-form');
-			document.getElementById('form-hint').textContent = 'Serviço indisponível no momento, por favor tente mais tarde';
-        })
-        .then(()=>{
-			contactForm.classList.remove('--sending');
-			grecaptcha.reset();
-        });
+	window.setInterval(() => {
+		contactForm.classList.remove('--sending');
+	}, 1000);
 
 };
 

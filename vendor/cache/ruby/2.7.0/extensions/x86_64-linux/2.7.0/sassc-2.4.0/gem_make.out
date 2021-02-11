@@ -1,11 +1,11 @@
-current directory: /home/entrecliques/events-ui/vendor/cache/ruby/2.7.0/gems/sassc-2.4.0/ext
-/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20210208-10441-1dro8z.rb extconf.rb
+current directory: /home/emanu-dev/workspace/jekyll-travel-agency/vendor/cache/ruby/2.7.0/gems/sassc-2.4.0/ext
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20210211-7910-1pjtd5v.rb extconf.rb
 creating Makefile
 
-current directory: /home/entrecliques/events-ui/vendor/cache/ruby/2.7.0/gems/sassc-2.4.0/ext
+current directory: /home/emanu-dev/workspace/jekyll-travel-agency/vendor/cache/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" clean
 
-current directory: /home/entrecliques/events-ui/vendor/cache/ruby/2.7.0/gems/sassc-2.4.0/ext
+current directory: /home/emanu-dev/workspace/jekyll-travel-agency/vendor/cache/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR="
 compiling ./libsass/src/memory/allocator.cpp
 compiling ./libsass/src/ast.cpp
@@ -75,6 +75,6 @@ compiling ./libsass/src/util_string.cpp
 compiling ./libsass/src/values.cpp
 linking shared-object sassc/libsass.so
 
-current directory: /home/entrecliques/events-ui/vendor/cache/ruby/2.7.0/gems/sassc-2.4.0/ext
+current directory: /home/emanu-dev/workspace/jekyll-travel-agency/vendor/cache/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 libsass.so ./.gem.20210208-10441-1fiho4j/sassc
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20210211-7910-u3rs26/sassc
