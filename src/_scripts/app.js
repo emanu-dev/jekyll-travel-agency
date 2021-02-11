@@ -7,7 +7,6 @@ import * as basicLightbox from 'basiclightbox';
 import mobileMenu from './_modules/mobile.menu.module';
 import slider from './_modules/slider.module';
 import testimonials from './_modules/testimonials.module';
-import scrollView from './_modules/scroll.view.module';
 import navMenu from './_modules/nav.menu.module';
 import * as form from './_modules/form.module';
 import placesGallery from './_modules/places.gallery.module';
