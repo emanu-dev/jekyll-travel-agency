@@ -8,9 +8,7 @@ const navMenu = () => {
 	const sectionList = [].slice.call(document.getElementById('main').querySelectorAll('.sec'));
 	const min = 0;
 	const max = (sectionList.length - 1);
-	let canScroll = true;	
-
-	let startY = 0;
+	let canScroll = true;
 
 	if (window.location.pathname.split( '/' ).length < 3) {
 

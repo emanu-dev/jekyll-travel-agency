@@ -1,5 +1,4 @@
 const init = () => {
-	// VMasker(document.getElementById('input-phone')).maskPattern('(99) 999999999');
 	const captcha = document.createElement('script');
 	captcha.setAttribute('src', 'https://www.google.com/recaptcha/api.js');
 
@@ -31,10 +30,9 @@ const validate = () => {
 
 	document.getElementById('form-hint').textContent = verifyResponse.message;
 	
-	if (verifyResponse.valid == false) {
+	if (verifyResponse.valid === false) {
 		document.getElementById('form-hint').classList.add('--warning');
 	}else{
-		formData['response'] = captcha;
 		send(formData, contactForm);
 	}	
 };

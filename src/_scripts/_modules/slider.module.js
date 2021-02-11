@@ -17,7 +17,7 @@ const slider = () => {
 				let allItems = [].slice.call(slideNav.childNodes);
 				
 				allItems.forEach((item, index) => {
-					if (item == e.currentTarget) {
+					if (item === e.currentTarget) {
 						item.classList.add('--active');
 						activeSlide = index;
 					} else {
@@ -37,7 +37,7 @@ const slider = () => {
 		let currentSlide = allItems[activeSlide];
 
 		allItems.forEach((item)=>{
-			if (item == currentSlide) {
+			if (item === currentSlide) {
 				item.classList.add('--active');
 			} else {
 				item.classList.remove('--active');

@@ -39,21 +39,21 @@ window.sendForm = form.default.validate;
 // Overwrites native 'firstElementChild' prototype.
 // Adds Document & DocumentFragment support for IE9 & Safari.
 ;(function(constructor) {
-    if (constructor &&
-        constructor.prototype &&
-        constructor.prototype.firstElementChild == null) {
-        Object.defineProperty(constructor.prototype, 'firstElementChild', {
-            get: function() {
-                var node, nodes = this.childNodes, i = 0;
-                while (node = nodes[i++]) {
-                    if (node.nodeType === 1) {
-                        return node;
-                    }
-                }
-                return null;
-            }
-        });
-    }
+  if (constructor &&
+    constructor.prototype &&
+    constructor.prototype.firstElementChild == null) {
+    Object.defineProperty(constructor.prototype, 'firstElementChild', {
+      get: function() {
+        var node, nodes = this.childNodes, i = 0;
+        while (node === nodes[i++]) {
+          if (node.nodeType === 1) {
+            return node;
+          }
+        }
+        return null;
+      }
+    });
+  }
 })(window.Node || window.Element);
 
 window.mobilecheck = function() {
@@ -74,80 +74,21 @@ if (document.getElementById(section)) {
 	document.getElementById(section).scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-
-//TODO: Modulate
-/*=========================================
-=            Scroll Navigation            =
-=========================================*/
-
-// const sectionScroll = () => {
-//     if (currentSection >= min && currentSection <= max) {
-//         // document.body.classList.remove('--locked');
-//         let st = window.pageYOffset || document.documentElement.scrollTop;
-//         if (st > lastScrollTop){
-//             console.log('Samuel L. Jackson says: Go up MOTHERFUCKER');
-//             currentSection = currentSection < max ? currentSection++ : max;
-//         } else {
-//             console.log('Samuel L. Jackson says: Go down MOTHERFUCKER');
-//             currentSection = currentSection > min ? currentSection-- : min;
-//         }
-        
-//         // lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-//         // document.body.classList.add('--locked');
-
-        
-//         document.getElementById(sectionList[currentSection].getAttribute('id')).scrollIntoView({ behavior: 'smooth', block: 'start' });
-//     }
-// };
-
-// function preventDefault(e) {
-//   e = e || window.event;
-//   if (e.preventDefault)
-//       e.preventDefault();
-//   e.returnValue = false;  
-// }
-
-// function preventDefaultForScrollKeys(e) {
-//     if (keys[e.keyCode]) {
-//         preventDefault(e);
-//         return false;
-//     }
-// }
-
-// function throttle(fn, wait) {
-//   var time = Date.now();
-//   return () => {
-//     if ((time + wait - Date.now()) < 0) {
-//       fn();
-//       time = Date.now();
-//     }
-//   };
-// }
-
-
-
-/*=====  End of Scroll Navigation  ======*/
-
-
 window.onload = () => {
+  if (!mobilecheck()){
+      document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+      document.body.scroll = "no"; // ie only
+  }else {
+      window.scrollTo(0,1);
+  }
 
-    if (!mobilecheck()){
-        document.documentElement.style.overflow = 'hidden';  // firefox, chrome
-        document.body.scroll = "no"; // ie only        
-    }else {
-        window.scrollTo(0,1);
-        // document.body.style.touchAction = 'none';        
-    }
+  form.default.init();
 
-
-    form.default.init();
-
-	const bgElements = [].slice.call(document.querySelectorAll('.attr-bg'));
+  const bgElements = [].slice.call(document.querySelectorAll('.attr-bg'));
 
 	if (bgElements.length > 0) {
 		bgElements.forEach((element) => {
 			attrToBg(element);
 		});
 	}
-  
 };
