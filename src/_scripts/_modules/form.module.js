@@ -1,11 +1,12 @@
 const init = () => {
-	const captcha = document.createElement('script');
-	captcha.setAttribute('src', 'https://www.google.com/recaptcha/api.js');
-
-	document.documentElement.appendChild(captcha);
-	
 	const fakeLabel = document.getElementById('fake-label');
 	const fakeLabelInput = document.getElementById('input-msg');
+	const formSubmit = document.getElementById('form-submit');
+
+	formSubmit.addEventListener('click', (e) => {
+		e.preventDefault();
+		validate();
+	})
 
 	fakeLabelInput.addEventListener('input', (e) => {
 		if (e.currentTarget.value.replace(/\s/g, '').length) {
@@ -94,44 +95,44 @@ function getData(form) {
 
 function verifyData(formData) {
     let valid = true;
-    let message = ['Insira '];
+    let message = ['Insert '];
     let response = {};
 
     if (!formData['name'].replace(/\s/g, '').length) {
         highlightInput('input-name');
-        message.push('seu nome');
+        message.push('your name');
         message.push(', ');
         valid = false;
     }
 
     if (!formData['email'].replace(/\s/g, '').length) {
         highlightInput('input-email');
-        message.push('seu email');
+        message.push('your email');
         message.push(', ');
         valid = false;
     } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email)) {
         highlightInput('input-email');
-        message.push('um email valido');
+        message.push('a valid email');
         message.push(', ');
         valid = false;
     }
 
     if (!formData['phone'].replace(/\s/g, '').length) {
         highlightInput('input-phone');
-        message.push('seu telefone');
+        message.push('your phone');
         message.push(', ');
         valid = false;
     }
 
     if (!formData['type'].replace(/\s/g, '').length) {
         highlightInput('input-type');
-        message.push('o tipo do evento');
+        message.push('the event type');
         message.push(', ');
         valid = false;
     }
 
 	message.pop();
-    if (message.length > 3) message[message.length - 2] = ' e ';
+    if (message.length > 3) message[message.length - 2] = ' and ';
     message = message.join('');
 
     response['valid'] = valid;
@@ -154,7 +155,7 @@ function cleanHighlightInput(formid) {
 	});
 }
 
-const send = (data, contactForm) => {
+const send = (contactForm) => {
 
 	contactForm.classList.add('--sending');
 
