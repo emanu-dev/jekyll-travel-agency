@@ -10,7 +10,11 @@
 	}
 
 	.footer__logo {
-		height: 6rem;
+		height: 3rem;
 		width: auto;
+
+		@media (max-width: 600px) {
+			height: 2.5rem;
+		}		
 	}
 }

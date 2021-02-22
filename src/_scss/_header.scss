@@ -74,6 +74,12 @@
 			padding: 0 1rem;
 			justify-content: space-between;
 			background-color: $main-brand;
+
+			> a {
+				display: flex;
+				justify-content: center;
+				grid-column: span 2;
+			}
 		}
 
 	}
@@ -197,6 +203,7 @@
 				&:before {
 					opacity: 1;
 					color: #fff;
+					font-family: sans-serif;
 					content: "☰";
 					text-align: center;
 					position: absolute;
@@ -219,6 +226,7 @@
 					&:after {
 						opacity: 1;
 						color: #fff;
+						font-family: sans-serif;
 						content: "X";
 						text-align: center;
 						position: absolute;
