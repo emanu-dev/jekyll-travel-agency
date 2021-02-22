@@ -16,8 +16,8 @@ gallery:
     media_url: http://via.placeholder.com/640x480
 ---
 
-A ginger biscuit, ginger nut or ginger snap is a globally popular biscuit based snack food, flavoured with ginger.
+A mountain is an elevated portion of the Earth's crust, generally with steep sides that show significant exposed bedrock.
 
-Ginger biscuits are flavoured with powdered ginger and a variety of other spices, most commonly cinnamon, molasses and nutmeg. There are many recipes for ginger nuts.
+Mountains are formed through tectonic forces, erosion, or volcanism, which act on time scales of up to tens of millions of years.
 
-Source [Wikipedia](https://en.wikipedia.org/wiki/Ginger_nut)
+Source [Wikipedia](https://en.wikipedia.org/wiki/Mountain)

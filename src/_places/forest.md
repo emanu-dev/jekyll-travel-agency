@@ -16,8 +16,8 @@ gallery:
     media_url: http://via.placeholder.com/640x480
 ---
 
-A ginger biscuit, ginger nut or ginger snap is a globally popular biscuit based snack food, flavoured with ginger.
+A forest is an area of land dominated by trees. Hundreds of definitions of forest are used throughout the world, incorporating factors such as tree density, tree height, land use, legal standing and ecological function.
 
-Ginger biscuits are flavoured with powdered ginger and a variety of other spices, most commonly cinnamon, molasses and nutmeg. There are many recipes for ginger nuts.
+Forests are the dominant terrestrial ecosystem of Earth, and are distributed around the globe. More than half of the world’s forests are found in only five countries (Brazil, Canada, China, Russian Federation and United States of America).
 
-Source [Wikipedia](https://en.wikipedia.org/wiki/Ginger_nut)
+Source [Wikipedia](https://en.wikipedia.org/wiki/Forest)

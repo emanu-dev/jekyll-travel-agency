@@ -16,8 +16,8 @@ gallery:
     media_url: http://via.placeholder.com/640x480
 ---
 
-A ginger biscuit, ginger nut or ginger snap is a globally popular biscuit based snack food, flavoured with ginger.
+Tropical forests are forested landscapes in tropical regions: i.e. land areas approximately bounded by the tropic of Cancer and Capricorn, but possibly affected by other factors such as prevailing winds.
 
-Ginger biscuits are flavoured with powdered ginger and a variety of other spices, most commonly cinnamon, molasses and nutmeg. There are many recipes for ginger nuts.
+The tropical domain has the largest proportion of the world’s forests (45 percent), followed by the boreal, temperate and subtropical domains.
 
-Source [Wikipedia](https://en.wikipedia.org/wiki/Ginger_nut)
+Source [Wikipedia](https://en.wikipedia.org/wiki/Tropical_forest)

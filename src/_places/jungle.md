@@ -16,8 +16,8 @@ gallery:
     media_url: http://via.placeholder.com/640x480
 ---
 
-A ginger biscuit, ginger nut or ginger snap is a globally popular biscuit based snack food, flavoured with ginger.
+A jungle is land covered with dense forest and tangled vegetation, usually in tropical climates. Application of the term has varied greatly during the past recent centuries. 
 
-Ginger biscuits are flavoured with powdered ginger and a variety of other spices, most commonly cinnamon, molasses and nutmeg. There are many recipes for ginger nuts.
+Because jungles occur on all inhabited landmasses and may incorporate numerous vegetation and land types in different climatic zones, the wildlife of jungles cannot be straightforwardly defined.
 
-Source [Wikipedia](https://en.wikipedia.org/wiki/Ginger_nut)
+Source [Wikipedia](https://en.wikipedia.org/wiki/Jungle)
