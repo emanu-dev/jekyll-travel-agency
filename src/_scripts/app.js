@@ -3,7 +3,7 @@
 ======================================================*/
 
 import contact from "../_img/contact.jpg";
-import eventosEnc from '../_img/eventos_enc.jpg';
+import panelGeneric from '../_img/panel-generic.jpg';
 import panel from '../_img/panel.jpg';
 import testimonial from '../_img/testimonial.jpg';
 import slide1 from '../_img/slide1.jpg';
