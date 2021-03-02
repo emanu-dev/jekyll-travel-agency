@@ -4,16 +4,16 @@ title: Jungles
 image_path: ../../images/places/place-2.jpg
 address: --
 gallery:
-  - thumb: http://via.placeholder.com/400x320
-    media_url: http://via.placeholder.com/400x320
-  - thumb: http://via.placeholder.com/640x480
-    media_url: http://via.placeholder.com/640x480
-  - thumb: http://via.placeholder.com/720x480
-    media_url: http://via.placeholder.com/720x480
-  - thumb: http://via.placeholder.com/400x320
-    media_url: http://via.placeholder.com/400x320
-  - thumb: http://via.placeholder.com/640x480
-    media_url: http://via.placeholder.com/640x480
+  - thumb: https://picsum.photos/400x320
+    media_url: https://picsum.photos/400x320
+  - thumb: https://picsum.photos/640x480
+    media_url: https://picsum.photos/640x480
+  - thumb: https://picsum.photos/720x480
+    media_url: https://picsum.photos/720x480
+  - thumb: https://picsum.photos/400x320
+    media_url: https://picsum.photos/400x320
+  - thumb: https://picsum.photos/640x480
+    media_url: https://picsum.photos/640x480
 ---
 
 A jungle is land covered with dense forest and tangled vegetation, usually in tropical climates. Application of the term has varied greatly during the past recent centuries. 

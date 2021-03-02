@@ -4,16 +4,16 @@ title: Forests
 image_path: ../../images/places/place-1.jpg
 address: --
 gallery:
-  - thumb: http://via.placeholder.com/400x320
-    media_url: http://via.placeholder.com/400x320
-  - thumb: http://via.placeholder.com/640x480
-    media_url: http://via.placeholder.com/640x480
-  - thumb: http://via.placeholder.com/720x480
-    media_url: http://via.placeholder.com/720x480
-  - thumb: http://via.placeholder.com/400x320
-    media_url: http://via.placeholder.com/400x320
-  - thumb: http://via.placeholder.com/640x480
-    media_url: http://via.placeholder.com/640x480
+  - thumb: https://picsum.photos/400x320
+    media_url: https://picsum.photos/400x320
+  - thumb: https://picsum.photos/640x480
+    media_url: https://picsum.photos/640x480
+  - thumb: https://picsum.photos/720x480
+    media_url: https://picsum.photos/720x480
+  - thumb: https://picsum.photos/400x320
+    media_url: https://picsum.photos/400x320
+  - thumb: https://picsum.photos/640x480
+    media_url: https://picsum.photos/640x480
 ---
 
 A forest is an area of land dominated by trees. Hundreds of definitions of forest are used throughout the world, incorporating factors such as tree density, tree height, land use, legal standing and ecological function.
