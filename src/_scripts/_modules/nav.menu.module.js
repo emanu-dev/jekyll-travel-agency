@@ -47,7 +47,7 @@ const navMenu = () => {
 	    }
 
 
-	});
+	}, { passive: false });
 
 
 	// window.addEventListener('touchstart', (e) => {

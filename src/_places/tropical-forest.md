@@ -4,16 +4,16 @@ title: Tropical Forests
 image_path: ../../images/places/place-3.jpg
 address: --
 gallery:
-  - thumb: https://picsum.photos/400x320
-    media_url: https://picsum.photos/400x320
-  - thumb: https://picsum.photos/640x480
-    media_url: https://picsum.photos/640x480
-  - thumb: https://picsum.photos/720x480
-    media_url: https://picsum.photos/720x480
-  - thumb: https://picsum.photos/400x320
-    media_url: https://picsum.photos/400x320
-  - thumb: https://picsum.photos/640x480
-    media_url: https://picsum.photos/640x480
+  - thumb: https://placeimg.com/400/320/nature
+    media_url: https://placeimg.com/400/320/nature
+  - thumb: https://placeimg.com/640/480/nature
+    media_url: https://placeimg.com/640/480/nature
+  - thumb: https://placeimg.com/720/480/nature
+    media_url: https://placeimg.com/720/480/nature
+  - thumb: https://placeimg.com/400/320/nature
+    media_url: https://placeimg.com/400/320/nature
+  - thumb: https://placeimg.com/640/480/nature
+    media_url: https://placeimg.com/640/480/nature
 ---
 
 Tropical forests are forested landscapes in tropical regions: i.e. land areas approximately bounded by the tropic of Cancer and Capricorn, but possibly affected by other factors such as prevailing winds.
